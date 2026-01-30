@@ -89,9 +89,9 @@ export const DataTable = memo(() => {
     try {
       // Use setTimeout to allow UI to update before heavy operation
       await new Promise((resolve) => setTimeout(resolve, 0));
-      
+
       exportToCSV(sortedData);
-      
+
       setExportMessage({
         type: "success",
         text: `Successfully exported ${sortedData.length} records`,
@@ -448,4 +448,3 @@ const Pagination = ({
     </div>
   );
 };
-
