@@ -2,7 +2,7 @@
 export const APP_CONFIG = {
   APP_NAME: 'EV Population Analytics Dashboard',
   VERSION: '1.0.0',
-  ITEMS_PER_PAGE: 50,
+  ITEMS_PER_PAGE: 20,
   MAX_CHART_ITEMS: 10,
 } as const;
 

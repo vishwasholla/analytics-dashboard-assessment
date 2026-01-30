@@ -25,16 +25,17 @@ export const BarChartCard = memo(({ title, data, dataKey = 'value' }: BarChartCa
               textAnchor="end"
               height={80}
             />
-            <YAxis tick={{ fontSize: 12 }} stroke="#6b7280" />
+            <YAxis tick={{ fontSize: 12 }} stroke="#6b7280" label={{ value: 'Vehicles', angle: -90, position: 'insideLeft' }} />
             <Tooltip
               contentStyle={{
                 backgroundColor: '#fff',
                 border: '1px solid #e5e7eb',
                 borderRadius: '0.5rem',
               }}
+              formatter={(value: number) => [value, 'Vehicles']}
             />
-            <Legend />
-            <Bar dataKey={dataKey} fill={CHART_COLORS[0]} radius={[4, 4, 0, 0]} />
+            <Legend formatter={() => 'Vehicles'} />
+            <Bar dataKey={dataKey} fill={CHART_COLORS[0]} radius={[4, 4, 0, 0]} name="Vehicles" />
           </BarChart>
         </ResponsiveContainer>
       </div>

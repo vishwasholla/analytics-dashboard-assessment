@@ -152,17 +152,18 @@ export const Dashboard = memo(() => {
               <PieChartCard title="EV Type Distribution" data={evTypeData} />
             </div>
 
+            {/* Data Table */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <BarChartCard title="Top Counties" data={countyData} />
               <BarChartCard title="Vehicles by Year" data={yearData} />
             </div>
-
-            {/* Data Table */}
-            <div>
-              <h2 className="text-xl font-semibold text-gray-900 mb-4">Vehicle Details</h2>
-              <DataTable />
-            </div>
           </div>
+        </div>
+
+        {/* Data Table - Full Width */}
+        <div className="mt-6">
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">Vehicle Details</h2>
+          <DataTable />
         </div>
       </div>
     </div>

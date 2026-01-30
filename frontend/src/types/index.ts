@@ -49,6 +49,7 @@ export interface FilterState {
   models: string[];
   evTypes: ('BEV' | 'PHEV')[];
   yearRange: [number, number];
+  rangeFilter: [number, number];
 }
 
 // Chart Data Types

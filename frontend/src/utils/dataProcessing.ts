@@ -53,6 +53,12 @@ export const filterEVData = (data: EVData[], filters: FilterState): EVData[] => 
       return false;
     }
 
+    // Electric range filter
+    const [minRange, maxRange] = filters.rangeFilter;
+    if (item.electricRange < minRange || item.electricRange > maxRange) {
+      return false;
+    }
+
     return true;
   });
 };
@@ -249,6 +255,18 @@ export const getYearRange = (data: EVData[]): [number, number] => {
   if (years.length === 0) return [2020, 2024];
   
   return [Math.min(...years), Math.max(...years)];
+};
+
+/**
+ * Calculate electric range from data
+ */
+export const getRangeFilter = (data: EVData[]): [number, number] => {
+  if (data.length === 0) return [0, 350];
+  
+  const ranges = data.map((item) => item.electricRange).filter(r => r >= 0);
+  if (ranges.length === 0) return [0, 350];
+  
+  return [Math.min(...ranges), Math.max(...ranges)];
 };
 
 /**

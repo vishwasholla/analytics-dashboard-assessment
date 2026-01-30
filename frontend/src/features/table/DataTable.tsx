@@ -1,18 +1,75 @@
-import { memo } from 'react';
-import { useEVDataStore } from '../../store/useEVDataStore';
-import { paginateData, getTotalPages } from '../../utils/dataProcessing';
-import type { EVData } from '../../types';
+import { memo, useState } from "react";
+import { useEVDataStore } from "../../store/useEVDataStore";
+import { getTotalPages } from "../../utils/dataProcessing";
+import type { EVData } from "../../types";
+
+type SortField = "modelYear" | "electricRange";
+type SortDirection = "asc" | "desc";
+
+interface SortConfig {
+  modelYear: SortDirection;
+  electricRange: SortDirection;
+}
 
 export const DataTable = memo(() => {
   const { filteredData, uiState, setUIState } = useEVDataStore();
   const { currentPage, itemsPerPage } = uiState;
 
-  const paginatedData = paginateData(filteredData, currentPage, itemsPerPage);
-  const totalPages = getTotalPages(filteredData.length, itemsPerPage);
+  // Track sort direction for both columns independently
+  const [sortConfig, setSortConfig] = useState<SortConfig>({
+    modelYear: "desc", // Default: highest year first
+    electricRange: "desc", // Default: highest range first
+  });
+
+  // Multi-column sorting with proper hierarchy
+  const sortedData = [...filteredData].sort((a, b) => {
+    // Primary sort: Year
+    const yearA = a.modelYear ?? 0; // Handle null/undefined
+    const yearB = b.modelYear ?? 0;
+
+    const yearComparison =
+      sortConfig.modelYear === "desc"
+        ? yearB - yearA // Descending: higher values first
+        : yearA - yearB; // Ascending: lower values first
+
+    // If years are different, return year comparison result
+    if (yearComparison !== 0) {
+      return yearComparison;
+    }
+
+    // Secondary sort: Range (only when years are equal)
+    const rangeA = a.electricRange ?? 0; // Handle null/undefined
+    const rangeB = b.electricRange ?? 0;
+
+    const rangeComparison =
+      sortConfig.electricRange === "desc"
+        ? rangeB - rangeA // Descending: higher values first
+        : rangeA - rangeB; // Ascending: lower values first
+
+    return rangeComparison;
+  });
+
+  const totalPages = getTotalPages(sortedData.length, itemsPerPage);
+
+  // Calculate start index for current page
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedData = sortedData.slice(startIndex, endIndex);
 
   const handlePageChange = (page: number) => {
     setUIState({ currentPage: page });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Removed scroll to top - keep user's scroll position
+  };
+
+  const handleSort = (field: SortField) => {
+    // Toggle the direction for the clicked field
+    setSortConfig((prev) => ({
+      ...prev,
+      [field]: prev[field] === "desc" ? "asc" : "desc",
+    }));
+
+    // Reset to first page when sorting changes
+    setUIState({ currentPage: 1 });
   };
 
   if (filteredData.length === 0) {
@@ -32,7 +89,9 @@ export const DataTable = memo(() => {
             d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
           />
         </svg>
-        <h3 className="mt-2 text-sm font-medium text-gray-900">No data found</h3>
+        <h3 className="mt-2 text-sm font-medium text-gray-900">
+          No data found
+        </h3>
         <p className="mt-1 text-sm text-gray-500">
           Try adjusting your filters to see more results.
         </p>
@@ -41,25 +100,49 @@ export const DataTable = memo(() => {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow overflow-hidden">
+    <div className="bg-white rounded-lg shadow overflow-hidden border border-gray-300">
       <div className="overflow-x-auto">
-        <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-gray-50">
-            <tr>
+        <table className="min-w-full divide-y divide-gray-300 border-collapse">
+          <thead className="bg-gray-100">
+            <tr className="border-b-2 border-gray-300">
+              <TableHeader>ID</TableHeader>
               <TableHeader>VIN</TableHeader>
               <TableHeader>Make</TableHeader>
               <TableHeader>Model</TableHeader>
-              <TableHeader>Year</TableHeader>
+              <SortableTableHeader
+                field="modelYear"
+                direction={sortConfig.modelYear}
+                onSort={handleSort}
+              >
+                Year
+              </SortableTableHeader>
               <TableHeader>Type</TableHeader>
-              <TableHeader>Range (mi)</TableHeader>
+              <SortableTableHeader
+                field="electricRange"
+                direction={sortConfig.electricRange}
+                onSort={handleSort}
+              >
+                Range (mi)
+              </SortableTableHeader>
+              <TableHeader>MSRP</TableHeader>
               <TableHeader>County</TableHeader>
               <TableHeader>City</TableHeader>
+              <TableHeader>State</TableHeader>
+              <TableHeader>Postal Code</TableHeader>
+              <TableHeader>CAFV Eligibility</TableHeader>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {paginatedData.map((vehicle) => (
-              <TableRow key={vehicle.vin} vehicle={vehicle} />
-            ))}
+            {paginatedData.map((vehicle, index) => {
+              const globalIndex = startIndex + index + 1;
+              return (
+                <TableRow
+                  key={`${vehicle.vin}-${globalIndex}`}
+                  vehicle={vehicle}
+                  rowId={globalIndex}
+                />
+              );
+            })}
           </tbody>
         </table>
       </div>
@@ -67,143 +150,190 @@ export const DataTable = memo(() => {
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}
-        totalItems={filteredData.length}
+        totalItems={sortedData.length}
+        itemsPerPage={itemsPerPage}
         onPageChange={handlePageChange}
       />
     </div>
   );
 });
 
-DataTable.displayName = 'DataTable';
+DataTable.displayName = "DataTable";
 
 const TableHeader = ({ children }: { children: React.ReactNode }) => (
   <th
     scope="col"
-    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+    className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-300 bg-gray-100"
   >
     {children}
   </th>
 );
 
-const TableRow = memo(({ vehicle }: { vehicle: EVData }) => (
-  <tr className="hover:bg-gray-50 transition-colors">
-    <td className="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900">
-      {vehicle.vin.slice(0, 10)}...
-    </td>
-    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{vehicle.make}</td>
-    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{vehicle.model}</td>
-    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{vehicle.modelYear}</td>
-    <td className="px-6 py-4 whitespace-nowrap">
-      <span
-        className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${
-          vehicle.evType === 'BEV'
-            ? 'bg-green-100 text-green-800'
-            : 'bg-blue-100 text-blue-800'
-        }`}
-      >
-        {vehicle.evType}
-      </span>
-    </td>
-    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-      {vehicle.electricRange}
-    </td>
-    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{vehicle.county}</td>
-    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{vehicle.city}</td>
-  </tr>
-));
+interface SortableTableHeaderProps {
+  field: SortField;
+  direction: SortDirection;
+  onSort: (field: SortField) => void;
+  children: React.ReactNode;
+}
 
-TableRow.displayName = 'TableRow';
+const SortableTableHeader = ({
+  field,
+  direction,
+  onSort,
+  children,
+}: SortableTableHeaderProps) => {
+  return (
+    <th
+      scope="col"
+      className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-300 bg-gray-100 cursor-pointer hover:bg-gray-200 select-none"
+      onClick={() => onSort(field)}
+    >
+      <div className="flex items-center gap-1">
+        {children}
+        <div className="flex flex-col">
+          <svg
+            className={`w-3 h-3 ${direction === "asc" ? "text-primary-600" : "text-gray-400"}`}
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" />
+          </svg>
+          <svg
+            className={`w-3 h-3 -mt-1 ${direction === "desc" ? "text-primary-600" : "text-gray-400"}`}
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" />
+          </svg>
+        </div>
+      </div>
+    </th>
+  );
+};
+
+const TableRow = memo(
+  ({ vehicle, rowId }: { vehicle: EVData; rowId: number }) => (
+    <tr className="hover:bg-gray-50 transition-colors border-b border-gray-200">
+      <td className="px-3 py-1.5 text-xs text-gray-900 border-r border-gray-200 text-center font-medium">
+        {rowId}
+      </td>
+      <td className="px-3 py-1.5 text-xs font-mono text-gray-900 border-r border-gray-200">
+        {vehicle.vin.slice(0, 10)}
+      </td>
+      <td className="px-3 py-1.5 text-xs text-gray-900 border-r border-gray-200">
+        {vehicle.make}
+      </td>
+      <td className="px-3 py-1.5 text-xs text-gray-900 border-r border-gray-200">
+        {vehicle.model}
+      </td>
+      <td className="px-3 py-1.5 text-xs text-gray-900 border-r border-gray-200 text-center">
+        {vehicle.modelYear}
+      </td>
+      <td className="px-3 py-1.5 border-r border-gray-200">
+        <span
+          className={`px-2 py-0.5 inline-flex text-xs leading-4 font-semibold rounded ${
+            vehicle.evType === "BEV"
+              ? "bg-green-100 text-green-800"
+              : "bg-blue-100 text-blue-800"
+          }`}
+        >
+          {vehicle.evType}
+        </span>
+      </td>
+      <td className="px-3 py-1.5 text-xs text-gray-900 border-r border-gray-200 text-right">
+        {vehicle.electricRange}
+      </td>
+      <td className="px-3 py-1.5 text-xs text-gray-900 border-r border-gray-200 text-right">
+        {vehicle.baseMSRP > 0 ? `$${vehicle.baseMSRP.toLocaleString()}` : "N/A"}
+      </td>
+      <td className="px-3 py-1.5 text-xs text-gray-900 border-r border-gray-200">
+        {vehicle.county}
+      </td>
+      <td className="px-3 py-1.5 text-xs text-gray-900 border-r border-gray-200">
+        {vehicle.city}
+      </td>
+      <td className="px-3 py-1.5 text-xs text-gray-900 border-r border-gray-200 text-center">
+        {vehicle.state}
+      </td>
+      <td className="px-3 py-1.5 text-xs text-gray-900 border-r border-gray-200">
+        {vehicle.postalCode}
+      </td>
+      <td className="px-3 py-1.5 text-xs text-gray-900 max-w-xs truncate">
+        {vehicle.cafvEligibility}
+      </td>
+    </tr>
+  ),
+);
+
+TableRow.displayName = "TableRow";
 
 interface PaginationProps {
   currentPage: number;
   totalPages: number;
   totalItems: number;
+  itemsPerPage: number;
   onPageChange: (page: number) => void;
 }
 
-const Pagination = ({ currentPage, totalPages, totalItems, onPageChange }: PaginationProps) => {
-  const pages = Array.from({ length: Math.min(totalPages, 5) }, (_, i) => {
-    if (totalPages <= 5) return i + 1;
-    if (currentPage <= 3) return i + 1;
-    if (currentPage >= totalPages - 2) return totalPages - 4 + i;
-    return currentPage - 2 + i;
-  });
+const Pagination = ({
+  currentPage,
+  totalPages,
+  totalItems,
+  itemsPerPage,
+  onPageChange,
+}: PaginationProps) => {
+  const startItem = (currentPage - 1) * itemsPerPage + 1;
+  const endItem = Math.min(currentPage * itemsPerPage, totalItems);
 
   return (
-    <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
-      <div className="flex-1 flex justify-between sm:hidden">
+    <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200">
+      <div className="flex items-center gap-2">
+        <span className="text-sm text-gray-700">
+          Showing <span className="font-medium">{startItem}</span> to{" "}
+          <span className="font-medium">{endItem}</span> of{" "}
+          <span className="font-medium">{totalItems}</span> results
+        </span>
+      </div>
+
+      <div className="flex items-center gap-2">
+        <button
+          onClick={() => onPageChange(1)}
+          disabled={currentPage === 1}
+          className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+          title="First page"
+        >
+          ««
+        </button>
         <button
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+          title="Previous page"
         >
-          Previous
+          ‹
         </button>
+
+        <span className="px-3 py-1 text-sm">
+          Page <span className="font-medium">{currentPage}</span> of{" "}
+          <span className="font-medium">{totalPages}</span>
+        </span>
+
         <button
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+          title="Next page"
         >
-          Next
+          ›
         </button>
-      </div>
-      <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
-        <div>
-          <p className="text-sm text-gray-700">
-            Showing <span className="font-medium">{(currentPage - 1) * 50 + 1}</span> to{' '}
-            <span className="font-medium">{Math.min(currentPage * 50, totalItems)}</span> of{' '}
-            <span className="font-medium">{totalItems}</span> results
-          </p>
-        </div>
-        <div>
-          <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
-            <button
-              onClick={() => onPageChange(currentPage - 1)}
-              disabled={currentPage === 1}
-              className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed focus:z-10 focus:outline-none focus:ring-2 focus:ring-primary-500"
-              aria-label="Previous page"
-            >
-              <span className="sr-only">Previous</span>
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path
-                  fillRule="evenodd"
-                  d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </button>
-            {pages.map((page) => (
-              <button
-                key={page}
-                onClick={() => onPageChange(page)}
-                className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium focus:z-10 focus:outline-none focus:ring-2 focus:ring-primary-500 ${
-                  page === currentPage
-                    ? 'z-10 bg-primary-50 border-primary-500 text-primary-600'
-                    : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
-                }`}
-                aria-label={`Page ${page}`}
-                aria-current={page === currentPage ? 'page' : undefined}
-              >
-                {page}
-              </button>
-            ))}
-            <button
-              onClick={() => onPageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
-              className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed focus:z-10 focus:outline-none focus:ring-2 focus:ring-primary-500"
-              aria-label="Next page"
-            >
-              <span className="sr-only">Next</span>
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path
-                  fillRule="evenodd"
-                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </button>
-          </nav>
-        </div>
+        <button
+          onClick={() => onPageChange(totalPages)}
+          disabled={currentPage === totalPages}
+          className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+          title="Last page"
+        >
+          »»
+        </button>
       </div>
     </div>
   );

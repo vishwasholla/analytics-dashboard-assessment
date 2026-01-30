@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { useEVDataStore } from '../../store/useEVDataStore';
-import { getUniqueValues } from '../../utils/dataProcessing';
+import { getUniqueValues, getRangeFilter } from '../../utils/dataProcessing';
 import { SearchBar } from './SearchBar';
 
 export const FilterPanel = memo(() => {
@@ -9,12 +9,23 @@ export const FilterPanel = memo(() => {
   const counties = getUniqueValues(data, 'county');
   const makes = getUniqueValues(data, 'make');
   const evTypes = ['BEV', 'PHEV'];
+  
+  const [dataMinYear, dataMaxYear] = [
+    Math.min(...data.map(d => d.modelYear).filter(y => y > 0)),
+    Math.max(...data.map(d => d.modelYear).filter(y => y > 0))
+  ];
+  
+  const [dataMinRange, dataMaxRange] = getRangeFilter(data);
 
   const hasActiveFilters =
     filters.searchQuery ||
     filters.counties.length > 0 ||
     filters.makes.length > 0 ||
-    filters.evTypes.length > 0;
+    filters.evTypes.length > 0 ||
+    filters.yearRange[0] !== dataMinYear ||
+    filters.yearRange[1] !== dataMaxYear ||
+    filters.rangeFilter[0] !== dataMinRange ||
+    filters.rangeFilter[1] !== dataMaxRange;
 
   return (
     <div className="bg-white rounded-lg shadow p-4 space-y-4">
@@ -34,6 +45,22 @@ export const FilterPanel = memo(() => {
       <SearchBar />
 
       <div className="space-y-3">
+        <RangeSlider
+          label="Model Year"
+          min={dataMinYear}
+          max={dataMaxYear}
+          value={filters.yearRange}
+          onChange={(value) => setFilters({ yearRange: value })}
+        />
+
+        <RangeSlider
+          label="Electric Range (miles)"
+          min={dataMinRange}
+          max={dataMaxRange}
+          value={filters.rangeFilter}
+          onChange={(value) => setFilters({ rangeFilter: value })}
+        />
+
         <FilterSelect
           label="County"
           options={counties}
@@ -97,6 +124,62 @@ const FilterSelect = ({ label, options, selected, onChange }: FilterSelectProps)
             <span className="text-sm text-gray-700">{option}</span>
           </label>
         ))}
+      </div>
+    </div>
+  );
+};
+
+interface RangeSliderProps {
+  label: string;
+  min: number;
+  max: number;
+  value: [number, number];
+  onChange: (value: [number, number]) => void;
+}
+
+const RangeSlider = ({ label, min, max, value, onChange }: RangeSliderProps) => {
+  const handleMinChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newMin = Number(e.target.value);
+    if (newMin <= value[1]) {
+      onChange([newMin, value[1]]);
+    }
+  };
+
+  const handleMaxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newMax = Number(e.target.value);
+    if (newMax >= value[0]) {
+      onChange([value[0], newMax]);
+    }
+  };
+
+  return (
+    <div>
+      <label className="block text-sm font-medium text-gray-700 mb-2">
+        {label}
+      </label>
+      <div className="px-2 py-3 border border-gray-200 rounded-lg space-y-3">
+        <div className="flex items-center justify-between text-sm text-gray-600">
+          <span>{value[0]}</span>
+          <span>{value[1]}</span>
+        </div>
+        <div className="space-y-2">
+          <input
+            type="range"
+            min={min}
+            max={max}
+            value={value[0]}
+            onChange={handleMinChange}
+            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary-600"
+          />
+          <input
+            type="range"
+            min={min}
+            max={max}
+            value={value[1]}
+            onChange={handleMaxChange}
+            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary-600"
+          />
+        </div>
       </div>
     </div>
   );

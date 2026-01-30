@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import type { EVDataStore, FilterState } from '../types';
-import { filterEVData, getYearRange } from '../utils/dataProcessing';
+import { filterEVData, getYearRange, getRangeFilter } from '../utils/dataProcessing';
 import { APP_CONFIG } from '../constants';
 
 const initialFilters: FilterState = {
@@ -11,6 +11,7 @@ const initialFilters: FilterState = {
   models: [],
   evTypes: [],
   yearRange: [2013, 2024], // Default range
+  rangeFilter: [0, 350], // Default electric range
 };
 
 export const useEVDataStore = create<EVDataStore>((set, get) => ({
@@ -26,7 +27,8 @@ export const useEVDataStore = create<EVDataStore>((set, get) => ({
 
   setData: (data) => {
     const yearRange = getYearRange(data);
-    const updatedFilters = { ...initialFilters, yearRange };
+    const rangeFilter = getRangeFilter(data);
+    const updatedFilters = { ...initialFilters, yearRange, rangeFilter };
     set({
       data,
       filteredData: data,
@@ -54,8 +56,9 @@ export const useEVDataStore = create<EVDataStore>((set, get) => ({
   resetFilters: () => {
     const { data } = get();
     const yearRange = getYearRange(data);
+    const rangeFilter = getRangeFilter(data);
     set({
-      filters: { ...initialFilters, yearRange },
+      filters: { ...initialFilters, yearRange, rangeFilter },
       filteredData: data,
       uiState: { ...get().uiState, currentPage: 1 },
     });
