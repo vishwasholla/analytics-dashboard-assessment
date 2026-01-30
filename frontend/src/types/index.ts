@@ -50,6 +50,13 @@ export interface FilterState {
   evTypes: ('BEV' | 'PHEV')[];
   yearRange: [number, number];
   rangeFilter: [number, number];
+  cafvEligibility: string[];
+  // Advanced filters
+  includeUnknownRange: boolean;
+  onlyUnknownRange: boolean;
+  msrpRange: [number, number];
+  legislativeDistricts: string[];
+  censusTracts: string[];
 }
 
 // Chart Data Types

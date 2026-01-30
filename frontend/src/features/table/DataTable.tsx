@@ -1,6 +1,7 @@
 import { memo, useState } from "react";
 import { useEVDataStore } from "../../store/useEVDataStore";
 import { getTotalPages } from "../../utils/dataProcessing";
+import { exportToCSV } from "../../utils/csvExport";
 import type { EVData } from "../../types";
 
 type SortField = "modelYear" | "electricRange";
@@ -20,6 +21,13 @@ export const DataTable = memo(() => {
     modelYear: "desc", // Default: highest year first
     electricRange: "desc", // Default: highest range first
   });
+
+  // Track export state
+  const [isExporting, setIsExporting] = useState(false);
+  const [exportMessage, setExportMessage] = useState<{
+    type: "success" | "error";
+    text: string;
+  } | null>(null);
 
   // Multi-column sorting with proper hierarchy
   const sortedData = [...filteredData].sort((a, b) => {
@@ -72,6 +80,38 @@ export const DataTable = memo(() => {
     setUIState({ currentPage: 1 });
   };
 
+  const handleExport = async () => {
+    if (sortedData.length === 0) return;
+
+    setIsExporting(true);
+    setExportMessage(null);
+
+    try {
+      // Use setTimeout to allow UI to update before heavy operation
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      
+      exportToCSV(sortedData);
+      
+      setExportMessage({
+        type: "success",
+        text: `Successfully exported ${sortedData.length} records`,
+      });
+
+      // Clear success message after 3 seconds
+      setTimeout(() => setExportMessage(null), 3000);
+    } catch (error) {
+      setExportMessage({
+        type: "error",
+        text: error instanceof Error ? error.message : "Export failed",
+      });
+
+      // Clear error message after 5 seconds
+      setTimeout(() => setExportMessage(null), 5000);
+    } finally {
+      setIsExporting(false);
+    }
+  };
+
   if (filteredData.length === 0) {
     return (
       <div className="bg-white rounded-lg shadow p-12 text-center">
@@ -100,60 +140,130 @@ export const DataTable = memo(() => {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow overflow-hidden border border-gray-300">
-      <div className="overflow-x-auto">
-        <table className="min-w-full divide-y divide-gray-300 border-collapse">
-          <thead className="bg-gray-100">
-            <tr className="border-b-2 border-gray-300">
-              <TableHeader>ID</TableHeader>
-              <TableHeader>VIN</TableHeader>
-              <TableHeader>Make</TableHeader>
-              <TableHeader>Model</TableHeader>
-              <SortableTableHeader
-                field="modelYear"
-                direction={sortConfig.modelYear}
-                onSort={handleSort}
+    <div className="space-y-4">
+      {/* Export Button */}
+      <div className="flex items-center justify-end gap-3">
+        {exportMessage && (
+          <span
+            className={`text-sm ${
+              exportMessage.type === "success"
+                ? "text-green-600"
+                : "text-red-600"
+            }`}
+          >
+            {exportMessage.text}
+          </span>
+        )}
+        <button
+          onClick={handleExport}
+          disabled={sortedData.length === 0 || isExporting}
+          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-lg hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          title={
+            sortedData.length === 0
+              ? "No data to export"
+              : `Export ${sortedData.length} filtered records to CSV`
+          }
+        >
+          {isExporting ? (
+            <>
+              <svg
+                className="animate-spin h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
               >
-                Year
-              </SortableTableHeader>
-              <TableHeader>Type</TableHeader>
-              <SortableTableHeader
-                field="electricRange"
-                direction={sortConfig.electricRange}
-                onSort={handleSort}
-              >
-                Range (mi)
-              </SortableTableHeader>
-              <TableHeader>MSRP</TableHeader>
-              <TableHeader>County</TableHeader>
-              <TableHeader>City</TableHeader>
-              <TableHeader>State</TableHeader>
-              <TableHeader>Postal Code</TableHeader>
-              <TableHeader>CAFV Eligibility</TableHeader>
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
-            {paginatedData.map((vehicle, index) => {
-              const globalIndex = startIndex + index + 1;
-              return (
-                <TableRow
-                  key={`${vehicle.vin}-${globalIndex}`}
-                  vehicle={vehicle}
-                  rowId={globalIndex}
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
                 />
-              );
-            })}
-          </tbody>
-        </table>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                />
+              </svg>
+              Exporting...
+            </>
+          ) : (
+            <>
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              Export to CSV
+            </>
+          )}
+        </button>
       </div>
 
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        totalItems={sortedData.length}
-        itemsPerPage={itemsPerPage}
-        onPageChange={handlePageChange}
-      />
+      {/* Table */}
+      <div className="bg-white rounded-lg shadow overflow-hidden border border-gray-300">
+        <div className="overflow-x-auto">
+          <table className="min-w-full divide-y divide-gray-300 border-collapse">
+            <thead className="bg-gray-100">
+              <tr className="border-b-2 border-gray-300">
+                <TableHeader>ID</TableHeader>
+                <TableHeader>VIN</TableHeader>
+                <TableHeader>Make</TableHeader>
+                <TableHeader>Model</TableHeader>
+                <SortableTableHeader
+                  field="modelYear"
+                  direction={sortConfig.modelYear}
+                  onSort={handleSort}
+                >
+                  Year
+                </SortableTableHeader>
+                <TableHeader>Type</TableHeader>
+                <SortableTableHeader
+                  field="electricRange"
+                  direction={sortConfig.electricRange}
+                  onSort={handleSort}
+                >
+                  Range (mi)
+                </SortableTableHeader>
+                <TableHeader>MSRP</TableHeader>
+                <TableHeader>County</TableHeader>
+                <TableHeader>City</TableHeader>
+                <TableHeader>State</TableHeader>
+                <TableHeader>Postal Code</TableHeader>
+                <TableHeader>CAFV Eligibility</TableHeader>
+              </tr>
+            </thead>
+            <tbody className="bg-white divide-y divide-gray-200">
+              {paginatedData.map((vehicle, index) => {
+                const globalIndex = startIndex + index + 1;
+                return (
+                  <TableRow
+                    key={`${vehicle.vin}-${globalIndex}`}
+                    vehicle={vehicle}
+                    rowId={globalIndex}
+                  />
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          totalItems={sortedData.length}
+          itemsPerPage={itemsPerPage}
+          onPageChange={handlePageChange}
+        />
+      </div>
     </div>
   );
 });
@@ -338,3 +448,4 @@ const Pagination = ({
     </div>
   );
 };
+

@@ -1,10 +1,12 @@
-import { memo } from 'react';
+import { memo, useState } from 'react';
 import { useEVDataStore } from '../../store/useEVDataStore';
 import { getUniqueValues, getRangeFilter } from '../../utils/dataProcessing';
 import { SearchBar } from './SearchBar';
+import { AdvancedFiltersModal } from './AdvancedFiltersModal';
 
 export const FilterPanel = memo(() => {
   const { data, filters, setFilters, resetFilters } = useEVDataStore();
+  const [isAdvancedModalOpen, setIsAdvancedModalOpen] = useState(false);
 
   const counties = getUniqueValues(data, 'county');
   const makes = getUniqueValues(data, 'make');
@@ -22,6 +24,7 @@ export const FilterPanel = memo(() => {
     filters.counties.length > 0 ||
     filters.makes.length > 0 ||
     filters.evTypes.length > 0 ||
+    filters.cafvEligibility.length > 0 ||
     filters.yearRange[0] !== dataMinYear ||
     filters.yearRange[1] !== dataMaxYear ||
     filters.rangeFilter[0] !== dataMinRange ||
@@ -82,6 +85,35 @@ export const FilterPanel = memo(() => {
           onChange={(values) => setFilters({ evTypes: values as ('BEV' | 'PHEV')[] })}
         />
       </div>
+
+      {/* Advanced Filters Button */}
+      <button
+        onClick={() => setIsAdvancedModalOpen(true)}
+        className="w-full mt-4 px-4 py-2 text-sm font-medium text-primary-600 bg-primary-50 border border-primary-200 rounded-lg hover:bg-primary-100 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-colors"
+      >
+        <div className="flex items-center justify-center gap-2">
+          <svg
+            className="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+            />
+          </svg>
+          Advanced Filters
+        </div>
+      </button>
+
+      {/* Advanced Filters Modal */}
+      <AdvancedFiltersModal
+        isOpen={isAdvancedModalOpen}
+        onClose={() => setIsAdvancedModalOpen(false)}
+      />
     </div>
   );
 });

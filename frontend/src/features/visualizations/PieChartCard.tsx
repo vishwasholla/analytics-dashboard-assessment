@@ -9,19 +9,24 @@ interface PieChartCardProps {
 }
 
 export const PieChartCard = memo(({ title, data }: PieChartCardProps) => {
+  // Custom label that only shows percentage inside, name in legend
+  const renderLabel = ({ percent }: any) => {
+    return `${(percent * 100).toFixed(0)}%`;
+  };
+
   return (
-    <div className="bg-white rounded-lg shadow p-6">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>
-      <div className="h-80">
+    <div className="bg-white rounded-lg shadow p-2 sm:p-3">
+      <h3 className="text-sm font-semibold text-gray-900 mb-1.5">{title}</h3>
+      <div className="h-40 sm:h-44">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
               data={data}
               cx="50%"
-              cy="50%"
+              cy="45%"
               labelLine={false}
-              label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
-              outerRadius={100}
+              label={renderLabel}
+              outerRadius={50}
               fill="#8884d8"
               dataKey="value"
             >
@@ -29,8 +34,14 @@ export const PieChartCard = memo(({ title, data }: PieChartCardProps) => {
                 <Cell key={`cell-${index}`} fill={CHART_COLORS[index % CHART_COLORS.length]} />
               ))}
             </Pie>
-            <Tooltip />
-            <Legend />
+            <Tooltip contentStyle={{ fontSize: '11px' }} />
+            <Legend 
+              wrapperStyle={{ fontSize: '11px' }} 
+              iconSize={8}
+              layout="horizontal"
+              verticalAlign="bottom"
+              align="center"
+            />
           </PieChart>
         </ResponsiveContainer>
       </div>

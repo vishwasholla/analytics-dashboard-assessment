@@ -53,10 +53,59 @@ export const filterEVData = (data: EVData[], filters: FilterState): EVData[] => 
       return false;
     }
 
-    // Electric range filter
-    const [minRange, maxRange] = filters.rangeFilter;
-    if (item.electricRange < minRange || item.electricRange > maxRange) {
+    // CAFV Eligibility filter (fuzzy match - case insensitive, handles typos)
+    if (filters.cafvEligibility.length > 0) {
+      const itemEligibility = item.cafvEligibility.toLowerCase().trim();
+      const matchesAny = filters.cafvEligibility.some(filterValue => {
+        const filterLower = filterValue.toLowerCase().trim();
+        // Exact match or contains
+        return itemEligibility.includes(filterLower) || filterLower.includes(itemEligibility);
+      });
+      if (!matchesAny) {
+        return false;
+      }
+    }
+
+    // Electric range filter with unknown range handling
+    if (filters.onlyUnknownRange) {
+      // Only show vehicles with 0 range
+      if (item.electricRange !== 0) {
+        return false;
+      }
+    } else {
+      // Normal range filtering
+      const [minRange, maxRange] = filters.rangeFilter;
+      if (filters.includeUnknownRange) {
+        // Include vehicles with 0 range OR within the range
+        if (item.electricRange !== 0 && (item.electricRange < minRange || item.electricRange > maxRange)) {
+          return false;
+        }
+      } else {
+        // Exclude vehicles with 0 range and apply range filter
+        if (item.electricRange === 0 || item.electricRange < minRange || item.electricRange > maxRange) {
+          return false;
+        }
+      }
+    }
+
+    // MSRP range filter
+    const [minMSRP, maxMSRP] = filters.msrpRange;
+    if (item.baseMSRP > 0 && (item.baseMSRP < minMSRP || item.baseMSRP > maxMSRP)) {
       return false;
+    }
+
+    // Legislative District filter
+    if (filters.legislativeDistricts.length > 0) {
+      if (!filters.legislativeDistricts.includes(item.legislativeDistrict)) {
+        return false;
+      }
+    }
+
+    // Census Tract filter
+    if (filters.censusTracts.length > 0) {
+      if (!filters.censusTracts.includes(item.censusTract)) {
+        return false;
+      }
     }
 
     return true;
@@ -267,6 +316,61 @@ export const getRangeFilter = (data: EVData[]): [number, number] => {
   if (ranges.length === 0) return [0, 350];
   
   return [Math.min(...ranges), Math.max(...ranges)];
+};
+
+/**
+ * Calculate MSRP range from data
+ */
+export const getMSRPRange = (data: EVData[]): [number, number] => {
+  if (data.length === 0) return [0, 200000];
+  
+  const msrps = data.map((item) => item.baseMSRP).filter(m => m > 0);
+  if (msrps.length === 0) return [0, 200000];
+  
+  return [Math.min(...msrps), Math.max(...msrps)];
+};
+
+/**
+ * Get unique CAFV eligibility values (normalized for fuzzy matching)
+ */
+export const getUniqueCafvEligibility = (data: EVData[]): string[] => {
+  const uniqueSet = new Set(
+    data
+      .map((item) => item.cafvEligibility.trim())
+      .filter(val => val && val !== 'Unknown')
+  );
+  return Array.from(uniqueSet).sort();
+};
+
+/**
+ * Get unique legislative districts
+ */
+export const getUniqueLegislativeDistricts = (data: EVData[]): string[] => {
+  const uniqueSet = new Set(
+    data
+      .map((item) => item.legislativeDistrict.trim())
+      .filter(val => val && val !== 'Unknown' && val !== '')
+  );
+  return Array.from(uniqueSet).sort((a, b) => {
+    const numA = parseInt(a);
+    const numB = parseInt(b);
+    if (!isNaN(numA) && !isNaN(numB)) {
+      return numA - numB;
+    }
+    return a.localeCompare(b);
+  });
+};
+
+/**
+ * Get unique census tracts
+ */
+export const getUniqueCensusTracts = (data: EVData[]): string[] => {
+  const uniqueSet = new Set(
+    data
+      .map((item) => item.censusTract.trim())
+      .filter(val => val && val !== 'Unknown' && val !== '')
+  );
+  return Array.from(uniqueSet).sort();
 };
 
 /**

@@ -12,6 +12,13 @@ const initialFilters: FilterState = {
   evTypes: [],
   yearRange: [2013, 2024], // Default range
   rangeFilter: [0, 350], // Default electric range
+  cafvEligibility: [],
+  // Advanced filters
+  includeUnknownRange: true,
+  onlyUnknownRange: false,
+  msrpRange: [0, 200000],
+  legislativeDistricts: [],
+  censusTracts: [],
 };
 
 export const useEVDataStore = create<EVDataStore>((set, get) => ({
@@ -28,7 +35,19 @@ export const useEVDataStore = create<EVDataStore>((set, get) => ({
   setData: (data) => {
     const yearRange = getYearRange(data);
     const rangeFilter = getRangeFilter(data);
-    const updatedFilters = { ...initialFilters, yearRange, rangeFilter };
+    const msrpRange: [number, number] = [0, 200000]; // Will be calculated properly
+    const msrps = data.map(d => d.baseMSRP).filter(m => m > 0);
+    if (msrps.length > 0) {
+      msrpRange[0] = Math.min(...msrps);
+      msrpRange[1] = Math.max(...msrps);
+    }
+    
+    const updatedFilters = { 
+      ...initialFilters, 
+      yearRange, 
+      rangeFilter,
+      msrpRange,
+    };
     set({
       data,
       filteredData: data,
@@ -43,7 +62,23 @@ export const useEVDataStore = create<EVDataStore>((set, get) => ({
 
   setFilters: (newFilters) => {
     const { data, filters } = get();
-    const updatedFilters = { ...filters, ...newFilters };
+    let updatedFilters = { ...filters, ...newFilters };
+    
+    // Auto-adjust includeUnknownRange when range filter changes
+    if (newFilters.rangeFilter) {
+      const [newMin] = newFilters.rangeFilter;
+      const [dataMin] = getRangeFilter(data);
+      
+      // If user increases the minimum range above 0, exclude unknown range vehicles
+      if (newMin > dataMin) {
+        updatedFilters.includeUnknownRange = false;
+      }
+      // If user resets to minimum, include unknown range vehicles
+      else if (newMin === dataMin) {
+        updatedFilters.includeUnknownRange = true;
+      }
+    }
+    
     const filteredData = filterEVData(data, updatedFilters);
     
     set({
@@ -57,8 +92,20 @@ export const useEVDataStore = create<EVDataStore>((set, get) => ({
     const { data } = get();
     const yearRange = getYearRange(data);
     const rangeFilter = getRangeFilter(data);
+    const msrpRange: [number, number] = [0, 200000];
+    const msrps = data.map(d => d.baseMSRP).filter(m => m > 0);
+    if (msrps.length > 0) {
+      msrpRange[0] = Math.min(...msrps);
+      msrpRange[1] = Math.max(...msrps);
+    }
+    
     set({
-      filters: { ...initialFilters, yearRange, rangeFilter },
+      filters: { 
+        ...initialFilters, 
+        yearRange, 
+        rangeFilter,
+        msrpRange,
+      },
       filteredData: data,
       uiState: { ...get().uiState, currentPage: 1 },
     });

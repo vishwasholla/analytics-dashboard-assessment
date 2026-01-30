@@ -1,21 +1,21 @@
 import { memo } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import type { ChartDataPoint } from '../../types';
 import { CHART_COLORS } from '../../constants';
 
-interface BarChartCardProps {
+interface LineChartCardProps {
   title: string;
   data: ChartDataPoint[];
   dataKey?: string;
 }
 
-export const BarChartCard = memo(({ title, data, dataKey = 'value' }: BarChartCardProps) => {
+export const LineChartCard = memo(({ title, data, dataKey = 'value' }: LineChartCardProps) => {
   return (
     <div className="bg-white rounded-lg shadow p-2 sm:p-3">
-      <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">{title}</h3>
+      <h3 className="text-sm font-semibold text-gray-900 mb-1.5">{title}</h3>
       <div className="h-40 sm:h-44">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={data} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
+          <LineChart data={data} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis
               dataKey="name"
@@ -35,12 +35,20 @@ export const BarChartCard = memo(({ title, data, dataKey = 'value' }: BarChartCa
               }}
               formatter={(value: number) => [value, 'Vehicles']}
             />
-            <Bar dataKey={dataKey} fill={CHART_COLORS[0]} radius={[4, 4, 0, 0]} name="Vehicles" maxBarSize={40} />
-          </BarChart>
+            <Line 
+              type="monotone" 
+              dataKey={dataKey} 
+              stroke={CHART_COLORS[0]} 
+              strokeWidth={2}
+              dot={{ fill: CHART_COLORS[0], r: 3 }}
+              activeDot={{ r: 5 }}
+              name="Vehicles"
+            />
+          </LineChart>
         </ResponsiveContainer>
       </div>
     </div>
   );
 });
 
-BarChartCard.displayName = 'BarChartCard';
+LineChartCard.displayName = 'LineChartCard';
