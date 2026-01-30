@@ -1,4 +1,9 @@
 {
+  "homepage": "https://github.com/vishwasholla/analytics-dashboard-assessment/",
+  "name": "analytics-dashboard-assessment",
+  "scripts": {
+    "deploy": "cd frontend && npm run build && cd .. && gh-pages -d frontend/dist"
+  },
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }
