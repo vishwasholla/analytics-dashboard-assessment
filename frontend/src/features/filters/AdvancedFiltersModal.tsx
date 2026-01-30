@@ -1,4 +1,5 @@
 import { memo, useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { useEVDataStore } from '../../store/useEVDataStore';
 import {
   getMSRPRange,
@@ -59,21 +60,21 @@ export const AdvancedFiltersModal = memo(
 
     if (!isOpen) return null;
 
-    return (
-      <div className="fixed inset-0 z-50 overflow-y-auto">
+    const modalContent = (
+      <div className="fixed inset-0 z-[9999]" style={{ isolation: 'isolate' }}>
         {/* Backdrop */}
         <div
           className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
           onClick={handleCancel}
         />
 
-        {/* Modal */}
-        <div className="flex min-h-full items-center justify-center p-4">
-          <div className="relative bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-hidden">
+        {/* Modal Container - Centered on screen */}
+        <div className="fixed inset-0 flex items-start justify-center overflow-y-auto p-4 sm:p-6 md:p-8 pt-8 sm:pt-12 md:pt-16">
+          <div className="relative bg-white rounded-lg shadow-2xl w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl max-h-[85vh] sm:max-h-[80vh] overflow-hidden">
             {/* Header */}
-            <div className="px-6 py-4 border-b border-gray-200">
+            <div className="px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-200">
               <div className="flex items-center justify-between">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2 className="text-lg sm:text-xl font-semibold text-gray-900">
                   Advanced Filters
                 </h2>
                 <button
@@ -98,7 +99,7 @@ export const AdvancedFiltersModal = memo(
             </div>
 
             {/* Content */}
-            <div className="px-6 py-4 overflow-y-auto max-h-[calc(90vh-140px)]">
+            <div className="px-4 sm:px-6 py-3 sm:py-4 overflow-y-auto max-h-[calc(85vh-120px)] sm:max-h-[calc(80vh-140px)]">
               <div className="space-y-6">
                 {/* CAFV Eligibility Filter */}
                 <div>
@@ -329,7 +330,7 @@ export const AdvancedFiltersModal = memo(
             </div>
 
             {/* Footer */}
-            <div className="px-6 py-4 border-t border-gray-200 flex items-center justify-end gap-3">
+            <div className="px-4 sm:px-6 py-3 sm:py-4 border-t border-gray-200 flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-2 sm:gap-3">
               <button
                 onClick={handleCancel}
                 className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary-500"
@@ -347,6 +348,9 @@ export const AdvancedFiltersModal = memo(
         </div>
       </div>
     );
+
+    // Render modal using portal to escape parent container constraints
+    return createPortal(modalContent, document.body);
   }
 );
 

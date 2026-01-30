@@ -35,12 +35,10 @@ export const useEVDataStore = create<EVDataStore>((set, get) => ({
   setData: (data) => {
     const yearRange = getYearRange(data);
     const rangeFilter = getRangeFilter(data);
-    const msrpRange: [number, number] = [0, 200000]; // Will be calculated properly
     const msrps = data.map(d => d.baseMSRP).filter(m => m > 0);
-    if (msrps.length > 0) {
-      msrpRange[0] = Math.min(...msrps);
-      msrpRange[1] = Math.max(...msrps);
-    }
+    const msrpRange: [number, number] = msrps.length > 0 
+      ? [0, Math.max(...msrps)] 
+      : [0, 200000];
     
     const updatedFilters = { 
       ...initialFilters, 
@@ -92,12 +90,10 @@ export const useEVDataStore = create<EVDataStore>((set, get) => ({
     const { data } = get();
     const yearRange = getYearRange(data);
     const rangeFilter = getRangeFilter(data);
-    const msrpRange: [number, number] = [0, 200000];
     const msrps = data.map(d => d.baseMSRP).filter(m => m > 0);
-    if (msrps.length > 0) {
-      msrpRange[0] = Math.min(...msrps);
-      msrpRange[1] = Math.max(...msrps);
-    }
+    const msrpRange: [number, number] = msrps.length > 0 
+      ? [0, Math.max(...msrps)] 
+      : [0, 200000];
     
     set({
       filters: { 

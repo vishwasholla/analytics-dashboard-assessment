@@ -90,8 +90,18 @@ export const filterEVData = (data: EVData[], filters: FilterState): EVData[] => 
 
     // MSRP range filter
     const [minMSRP, maxMSRP] = filters.msrpRange;
-    if (item.baseMSRP > 0 && (item.baseMSRP < minMSRP || item.baseMSRP > maxMSRP)) {
-      return false;
+    // If minimum MSRP is 0, include all vehicles (including those with 0/N/A MSRP)
+    // If minimum MSRP is > 0, exclude vehicles with 0 MSRP and apply range filter
+    if (minMSRP > 0) {
+      // Exclude vehicles with 0 or N/A MSRP when filtering
+      if (item.baseMSRP === 0 || item.baseMSRP < minMSRP || item.baseMSRP > maxMSRP) {
+        return false;
+      }
+    } else {
+      // When minMSRP is 0, only apply the max filter to vehicles with MSRP > 0
+      if (item.baseMSRP > 0 && item.baseMSRP > maxMSRP) {
+        return false;
+      }
     }
 
     // Legislative District filter
@@ -327,7 +337,8 @@ export const getMSRPRange = (data: EVData[]): [number, number] => {
   const msrps = data.map((item) => item.baseMSRP).filter(m => m > 0);
   if (msrps.length === 0) return [0, 200000];
   
-  return [Math.min(...msrps), Math.max(...msrps)];
+  // Always start from 0 to include all vehicles
+  return [0, Math.max(...msrps)];
 };
 
 /**

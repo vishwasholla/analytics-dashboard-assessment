@@ -14,7 +14,7 @@ import { ActiveFilters } from '../filters/ActiveFilters';
 import { LoadingSkeleton } from '../../components/LoadingSkeleton';
 
 export const Dashboard = memo(() => {
-  const { data: csvData, loading, errors, reload } = useCSVData('/data-to-visualize/sample_vehicle_population_data.csv');
+  const { data: csvData, loading, errors, reload } = useCSVData('/data-to-visualize/Electric_Vehicle_Population_Data.csv');
   const { filteredData, filters, setData } = useEVDataStore();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
