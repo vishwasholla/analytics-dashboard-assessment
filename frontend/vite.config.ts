@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/analytics-dashboard-assessment/'
+  base: '/analytics-dashboard-assessment/' // Commented out for local development
 })
 
 // To test responsivenes on small screen
