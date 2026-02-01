@@ -1,0 +1,7828 @@
+{
+  "analysis": {
+    "totalVehicles": 50000,
+    "totalBEV": 39461,
+    "totalPHEV": 10539,
+    "avgRange": 123.48,
+    "uniqueStates": 1,
+    "uniqueCounties": 20,
+    "uniqueCities": 152,
+    "uniqueMakes": 38,
+    "uniqueModels": 132,
+    "topMakes": [
+      [
+        "TESLA",
+        23127
+      ],
+      [
+        "NISSAN",
+        3909
+      ],
+      [
+        "CHEVROLET",
+        3543
+      ],
+      [
+        "BMW",
+        2214
+      ],
+      [
+        "FORD",
+        2028
+      ],
+      [
+        "KIA",
+        1980
+      ],
+      [
+        "TOYOTA",
+        1568
+      ],
+      [
+        "JEEP",
+        1399
+      ],
+      [
+        "VOLKSWAGEN",
+        1328
+      ],
+      [
+        "HYUNDAI",
+        1234
+      ]
+    ],
+    "evTypeDistribution": {
+      "BEV": {
+        "count": 39461,
+        "percentage": 78.92
+      },
+      "PHEV": {
+        "count": 10539,
+        "percentage": 21.08
+      }
+    },
+    "vehiclesByYear": [
+      [
+        "2024",
+        2086
+      ],
+      [
+        "2023",
+        16791
+      ],
+      [
+        "2022",
+        7813
+      ],
+      [
+        "2021",
+        5227
+      ],
+      [
+        "2020",
+        3290
+      ],
+      [
+        "2019",
+        3029
+      ],
+      [
+        "2018",
+        4092
+      ],
+      [
+        "2017",
+        2275
+      ],
+      [
+        "2016",
+        1468
+      ],
+      [
+        "2015",
+        1266
+      ],
+      [
+        "2014",
+        914
+      ],
+      [
+        "2013",
+        1145
+      ],
+      [
+        "2012",
+        390
+      ],
+      [
+        "2011",
+        199
+      ],
+      [
+        "2010",
+        10
+      ],
+      [
+        "2008",
+        2
+      ],
+      [
+        "2002",
+        1
+      ],
+      [
+        "2000",
+        1
+      ],
+      [
+        "1998",
+        1
+      ]
+    ],
+    "topCounties": [
+      [
+        "King",
+        37502
+      ],
+      [
+        "Clark",
+        4838
+      ],
+      [
+        "Snohomish",
+        2553
+      ],
+      [
+        "Kitsap",
+        2154
+      ],
+      [
+        "Thurston",
+        1524
+      ],
+      [
+        "Cowlitz",
+        440
+      ],
+      [
+        "Jefferson",
+        393
+      ],
+      [
+        "Yakima",
+        306
+      ],
+      [
+        "Island",
+        152
+      ],
+      [
+        "Clallam",
+        53
+      ]
+    ],
+    "topCities": [
+      [
+        "Seattle",
+        10427
+      ],
+      [
+        "Bellevue",
+        4573
+      ],
+      [
+        "Vancouver",
+        3008
+      ],
+      [
+        "Kirkland",
+        2751
+      ],
+      [
+        "Sammamish",
+        2599
+      ],
+      [
+        "Tukwila",
+        2205
+      ],
+      [
+        "Redmond",
+        2104
+      ],
+      [
+        "Bothell",
+        1744
+      ],
+      [
+        "Renton",
+        1437
+      ],
+      [
+        "Shoreline",
+        1391
+      ]
+    ],
+    "states": [
+      "WA"
+    ],
+    "counties": [
+      "King",
+      "Snohomish",
+      "Kitsap",
+      "Thurston",
+      "Yakima",
+      "Island",
+      "Chelan",
+      "Skagit",
+      "Spokane",
+      "Walla Walla",
+      "Grant",
+      "Stevens",
+      "Whitman",
+      "Kittitas",
+      "Pend Oreille",
+      "Clark",
+      "Cowlitz",
+      "Jefferson",
+      "Clallam",
+      "Klickitat"
+    ],
+    "cities": [
+      "Seattle",
+      "Bothell",
+      "Issaquah",
+      "Suquamish",
+      "Yelm",
+      "Yakima",
+      "Port Orchard",
+      "Auburn",
+      "Bainbridge Island",
+      "Lynnwood",
+      "Olympia",
+      "Renton",
+      "Tenino",
+      "Lacey",
+      "Brier",
+      "Shoreline",
+      "Rochester",
+      "Coupeville",
+      "Marysville",
+      "Pacific",
+      "Everett",
+      "Edmonds",
+      "Wenatchee",
+      "Kingston",
+      "Mukilteo",
+      "Anacortes",
+      "Bremerton",
+      "Snohomish",
+      "Spokane",
+      "Oak Harbor",
+      "Walla Walla",
+      "Mill Creek",
+      "Moses Lake",
+      "Ephrata",
+      "Monroe",
+      "Moxee",
+      "Olalla",
+      "Chewelah",
+      "Freeland",
+      "Pullman",
+      "Ellensburg",
+      "Naches",
+      "Kettle Falls",
+      "Chelan",
+      "Quincy",
+      "Clinton",
+      "Burien",
+      "Cashmere",
+      "Poulsbo",
+      "Vashon",
+      "Langley",
+      "Newport",
+      "Ravensdale",
+      "Cle Elum",
+      "Redmond",
+      "Mount Vernon",
+      "Kent",
+      "Vancouver",
+      "Bellevue",
+      "Kirkland",
+      "Tukwila",
+      "Federal Way",
+      "Seabeck",
+      "North Bend",
+      "Duvall",
+      "Woodinville",
+      "Sammamish",
+      "Brush Prairie",
+      "Castle Rock",
+      "La Center",
+      "Camas",
+      "Silverdale",
+      "Yacolt",
+      "Rainier",
+      "Newcastle",
+      "Normandy Park",
+      "Seatac",
+      "Medina",
+      "Kenmore",
+      "Kelso",
+      "Clyde Hill",
+      "Lake Stevens",
+      "Longview",
+      "Lake Forest Park",
+      "Arlington",
+      "Port Hadlock",
+      "Port Townsend",
+      "Colville",
+      "Ariel",
+      "Port Ludlow",
+      "Washougal",
+      "Des Moines",
+      "Kalama",
+      "Battle Ground",
+      "Camano Island",
+      "Woodway",
+      "Sequim",
+      "Ridgefield",
+      "Beaux Arts",
+      "Selah",
+      "Woodland",
+      "Algona",
+      "Brinnon",
+      "Maple Valley",
+      "Enumclaw",
+      "Tumwater",
+      "Mercer Island",
+      "Sunnyside",
+      "Nine Mile Falls",
+      "Grandview",
+      "Zillah",
+      "Sultan",
+      "Covington",
+      "Nordland",
+      "Port Angeles",
+      "Mountlake Terrace",
+      "Toppenish",
+      "Bucoda",
+      "Silverlake",
+      "Goldendale",
+      "Indianola",
+      "Skykomish",
+      "Quilcene",
+      "Granger",
+      "Cowiche",
+      "Granite Falls",
+      "Mabton",
+      "Stanwood",
+      "White Salmon",
+      "Wapato",
+      "Forks",
+      "Black Diamond",
+      "Darrington",
+      "Tieton",
+      "Bingen",
+      "Tulalip",
+      "Gold Bar",
+      "Snoqualmie",
+      "Carnation",
+      "Keyport",
+      "Amboy",
+      "Centralia",
+      "Union Gap",
+      "Milton",
+      "Chimacum",
+      "Hunts Point",
+      "Hansville",
+      "Yarrow Point",
+      "Outlook",
+      "Gig Harbor",
+      "Index",
+      "Toutle"
+    ],
+    "makes": [
+      "TESLA",
+      "FORD",
+      "NISSAN",
+      "KIA",
+      "BMW",
+      "CHEVROLET",
+      "AUDI",
+      "SMART",
+      "VOLKSWAGEN",
+      "TOYOTA",
+      "RIVIAN",
+      "JEEP",
+      "HYUNDAI",
+      "FIAT",
+      "PORSCHE",
+      "CHRYSLER",
+      "HONDA",
+      "MITSUBISHI",
+      "LEXUS",
+      "VOLVO",
+      "DODGE",
+      "MERCEDES-BENZ",
+      "SUBARU",
+      "JAGUAR",
+      "POLESTAR",
+      "MINI",
+      "LUCID",
+      "LAND ROVER",
+      "CADILLAC",
+      "ALFA ROMEO",
+      "FISKER",
+      "MAZDA",
+      "LINCOLN",
+      "GENESIS",
+      "TH!NK",
+      "GMC",
+      "BENTLEY",
+      "AZURE DYNAMICS"
+    ],
+    "models": [
+      "MODEL Y",
+      "MODEL S",
+      "FUSION",
+      "LEAF",
+      "OPTIMA",
+      "X5",
+      "I3",
+      "BOLT EV",
+      "Q5 E",
+      "MODEL 3",
+      "C-MAX",
+      "NIRO",
+      "E-TRON",
+      "SOUL EV",
+      "I8",
+      "EV9",
+      "FORTWO",
+      "SORENTO",
+      "E-GOLF",
+      "PRIUS PRIME",
+      "R1T",
+      "RAV4",
+      "WRANGLER",
+      "KONA",
+      "X3",
+      "SOUL",
+      "MODEL X",
+      "500",
+      "RAV4 PRIME",
+      "IONIQ",
+      "ESCAPE",
+      "CAYENNE",
+      "R1S",
+      "VOLT",
+      "SANTA FE",
+      "330E",
+      "F-150",
+      "SPARK",
+      "TUCSON",
+      "PACIFICA",
+      "CLARITY",
+      "A3",
+      "OUTLANDER",
+      "NX",
+      "EQ FORTWO",
+      "MUSTANG MACH-E",
+      "ID.4",
+      "EDV",
+      "XC40",
+      "HORNET",
+      "SPORTAGE",
+      "XC60",
+      "EQS-CLASS SUV",
+      "PRIUS PLUG-IN",
+      "SOLTERRA",
+      "EV6",
+      "GLE-CLASS",
+      "I4",
+      "BOLT EUV",
+      "Q4",
+      "XC90",
+      "KONA ELECTRIC",
+      "I-PACE",
+      "PS2",
+      "IONIQ 5",
+      "TAYCAN",
+      "HARDTOP",
+      "GRAND CHEROKEE",
+      "AIR",
+      "GLC-CLASS",
+      "I-MIEV",
+      "RANGE ROVER SPORT",
+      "IONIQ 6",
+      "PRIUS",
+      "BZ4X",
+      "EQS-CLASS SEDAN",
+      "C40",
+      "E-TRON SPORTBACK",
+      "LYRIQ",
+      "TONALE",
+      "I5",
+      "530E",
+      "ARIYA",
+      "EQE-CLASS SUV",
+      "IX",
+      "CROSSTREK",
+      "745E",
+      "RS E-TRON GT",
+      "OCEAN",
+      "Q5",
+      "FOCUS",
+      "EQB-CLASS",
+      "ACCORD",
+      "V60",
+      "CX-90",
+      "TRANSIT",
+      "E-TRON GT",
+      "S60",
+      "B-CLASS",
+      "COUNTRYMAN",
+      "KARMA",
+      "BLAZER EV",
+      "Q8",
+      "RZ 450E",
+      "AVIATOR",
+      "GV60",
+      "ELR",
+      "PANAMERA",
+      "CITY",
+      "740E",
+      "EQE-CLASS SEDAN",
+      "SILVERADO EV",
+      "FORTWO ELECTRIC DRIVE",
+      "CORSAIR",
+      "HUMMER EV PICKUP",
+      "RANGE ROVER",
+      "GV70",
+      "RANGER",
+      "ROADSTER",
+      "I7",
+      "G80",
+      "C-CLASS",
+      "S90",
+      "SONATA",
+      "A7",
+      "FLYING SPUR",
+      "A8 E",
+      "XM",
+      "MX-30",
+      "S-CLASS",
+      "TRANSIT CONNECT ELECTRIC",
+      "CT6"
+    ]
+  },
+  "testCases": {
+    "independent": [
+      {
+        "id": 1,
+        "type": "Model Year",
+        "description": "Vehicles with model year greater than 2020 and less than 2023",
+        "criteria": "Model Year >= 2020 AND Model Year <= 2023",
+        "analysis": {
+          "totalVehicles": 33121,
+          "totalBEV": 28080,
+          "totalPHEV": 5041,
+          "avgRange": 119.54,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "King",
+            "Snohomish",
+            "Kitsap",
+            "Yakima",
+            "Thurston",
+            "Grant",
+            "Island",
+            "Whitman",
+            "Kittitas",
+            "Stevens",
+            "Spokane",
+            "Skagit",
+            "Clark",
+            "Cowlitz",
+            "Jefferson",
+            "Clallam",
+            "Klickitat"
+          ],
+          "cities": [
+            "Seattle",
+            "Bothell",
+            "Suquamish",
+            "Auburn",
+            "Yakima",
+            "Lynnwood",
+            "Lacey",
+            "Olympia",
+            "Rochester",
+            "Marysville",
+            "Tenino",
+            "Everett",
+            "Snohomish",
+            "Moses Lake",
+            "Ephrata",
+            "Moxee",
+            "Freeland",
+            "Pullman",
+            "Monroe",
+            "Ellensburg",
+            "Edmonds",
+            "Naches",
+            "Kettle Falls",
+            "Quincy",
+            "Oak Harbor",
+            "Spokane",
+            "Anacortes",
+            "Langley",
+            "Mount Vernon",
+            "Vancouver",
+            "Bellevue",
+            "Kent",
+            "Kirkland",
+            "Redmond",
+            "Tukwila",
+            "Seabeck",
+            "North Bend",
+            "Duvall",
+            "Woodinville",
+            "Federal Way",
+            "Shoreline",
+            "Brush Prairie",
+            "Castle Rock",
+            "Sammamish",
+            "Silverdale",
+            "Poulsbo",
+            "Rainier",
+            "Issaquah",
+            "Newcastle",
+            "Mukilteo",
+            "Burien",
+            "Normandy Park",
+            "Seatac",
+            "Camas",
+            "Renton",
+            "Bainbridge Island",
+            "Kelso",
+            "Clyde Hill",
+            "Longview",
+            "Bremerton",
+            "Lake Stevens",
+            "Lake Forest Park",
+            "Arlington",
+            "Medina",
+            "Port Hadlock",
+            "Port Townsend",
+            "Port Ludlow",
+            "Kenmore",
+            "Washougal",
+            "Kalama",
+            "Olalla",
+            "Port Orchard",
+            "Mill Creek",
+            "Battle Ground",
+            "Camano Island",
+            "Woodway",
+            "Ridgefield",
+            "Beaux Arts",
+            "Selah",
+            "Woodland",
+            "Brinnon",
+            "Maple Valley",
+            "La Center",
+            "Tumwater",
+            "Mercer Island",
+            "Sunnyside",
+            "Yelm",
+            "Pacific",
+            "Zillah",
+            "Yacolt",
+            "Covington",
+            "Colville",
+            "Des Moines",
+            "Algona",
+            "Port Angeles",
+            "Mountlake Terrace",
+            "Kingston",
+            "Bucoda",
+            "Nine Mile Falls",
+            "Goldendale",
+            "Indianola",
+            "Silverlake",
+            "Skykomish",
+            "Enumclaw",
+            "Coupeville",
+            "Quilcene",
+            "Grandview",
+            "Granger",
+            "Mabton",
+            "Stanwood",
+            "Sultan",
+            "White Salmon",
+            "Sequim",
+            "Black Diamond",
+            "Granite Falls",
+            "Nordland",
+            "Ariel",
+            "Tieton",
+            "Bingen",
+            "Snoqualmie",
+            "Brier",
+            "Amboy",
+            "Centralia",
+            "Union Gap",
+            "Carnation",
+            "Forks",
+            "Chimacum",
+            "Gold Bar",
+            "Hansville",
+            "Outlook",
+            "Hunts Point",
+            "Keyport",
+            "Milton",
+            "Yarrow Point",
+            "Tulalip",
+            "Index",
+            "Toutle"
+          ],
+          "makes": [
+            "TESLA",
+            "BMW",
+            "CHEVROLET",
+            "AUDI",
+            "KIA",
+            "RIVIAN",
+            "NISSAN",
+            "JEEP",
+            "HYUNDAI",
+            "FORD",
+            "VOLKSWAGEN",
+            "VOLVO",
+            "MERCEDES-BENZ",
+            "SUBARU",
+            "TOYOTA",
+            "CHRYSLER",
+            "PORSCHE",
+            "POLESTAR",
+            "MINI",
+            "LUCID",
+            "LAND ROVER",
+            "HONDA",
+            "MITSUBISHI",
+            "CADILLAC",
+            "FISKER",
+            "JAGUAR",
+            "LEXUS",
+            "LINCOLN",
+            "GENESIS",
+            "BENTLEY",
+            "MAZDA"
+          ],
+          "models": [
+            "MODEL Y",
+            "X5",
+            "BOLT EV",
+            "Q5 E",
+            "MODEL 3",
+            "E-TRON",
+            "SORENTO",
+            "NIRO",
+            "R1T",
+            "LEAF",
+            "WRANGLER",
+            "KONA",
+            "X3",
+            "IONIQ",
+            "ESCAPE",
+            "MODEL X",
+            "R1S",
+            "SANTA FE",
+            "330E",
+            "F-150",
+            "MUSTANG MACH-E",
+            "ID.4",
+            "EDV",
+            "XC40",
+            "SPORTAGE",
+            "XC60",
+            "EQS-CLASS SUV",
+            "SOLTERRA",
+            "MODEL S",
+            "EV6",
+            "RAV4 PRIME",
+            "BOLT EUV",
+            "PACIFICA",
+            "KONA ELECTRIC",
+            "IONIQ 5",
+            "TAYCAN",
+            "PS2",
+            "HARDTOP",
+            "GRAND CHEROKEE",
+            "AIR",
+            "XC90",
+            "TUCSON",
+            "I4",
+            "RANGE ROVER SPORT",
+            "IONIQ 6",
+            "PRIUS",
+            "CLARITY",
+            "Q4",
+            "BZ4X",
+            "EQS-CLASS SEDAN",
+            "C40",
+            "E-TRON SPORTBACK",
+            "PRIUS PRIME",
+            "OUTLANDER",
+            "LYRIQ",
+            "ARIYA",
+            "EQE-CLASS SUV",
+            "745E",
+            "IX",
+            "RS E-TRON GT",
+            "OCEAN",
+            "Q5",
+            "EQB-CLASS",
+            "CAYENNE",
+            "V60",
+            "TRANSIT",
+            "E-TRON GT",
+            "GLC-CLASS",
+            "S60",
+            "COUNTRYMAN",
+            "I-PACE",
+            "RZ 450E",
+            "AVIATOR",
+            "530E",
+            "GV60",
+            "I3",
+            "NX",
+            "PANAMERA",
+            "FUSION",
+            "EQE-CLASS SEDAN",
+            "CORSAIR",
+            "RANGE ROVER",
+            "GV70",
+            "G80",
+            "A7",
+            "FLYING SPUR",
+            "A8 E",
+            "MX-30",
+            "OPTIMA",
+            "S90"
+          ],
+          "topMakes": [
+            [
+              "TESLA",
+              17608
+            ],
+            [
+              "CHEVROLET",
+              1662
+            ],
+            [
+              "KIA",
+              1352
+            ],
+            [
+              "FORD",
+              1285
+            ],
+            [
+              "JEEP",
+              1240
+            ],
+            [
+              "RIVIAN",
+              1082
+            ],
+            [
+              "HYUNDAI",
+              1082
+            ],
+            [
+              "BMW",
+              1037
+            ],
+            [
+              "VOLKSWAGEN",
+              1007
+            ],
+            [
+              "NISSAN",
+              1000
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 28080,
+              "percentage": 84.78
+            },
+            "PHEV": {
+              "count": 5041,
+              "percentage": 15.22
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2023",
+              16791
+            ],
+            [
+              "2022",
+              7813
+            ],
+            [
+              "2021",
+              5227
+            ],
+            [
+              "2020",
+              3290
+            ]
+          ],
+          "topCounties": [
+            [
+              "King",
+              25158
+            ],
+            [
+              "Clark",
+              3085
+            ],
+            [
+              "Snohomish",
+              1880
+            ],
+            [
+              "Kitsap",
+              1257
+            ],
+            [
+              "Thurston",
+              895
+            ],
+            [
+              "Cowlitz",
+              293
+            ],
+            [
+              "Jefferson",
+              198
+            ],
+            [
+              "Yakima",
+              189
+            ],
+            [
+              "Island",
+              89
+            ],
+            [
+              "Clallam",
+              33
+            ]
+          ],
+          "topCities": [
+            [
+              "Seattle",
+              6502
+            ],
+            [
+              "Bellevue",
+              3058
+            ],
+            [
+              "Vancouver",
+              1911
+            ],
+            [
+              "Sammamish",
+              1814
+            ],
+            [
+              "Kirkland",
+              1803
+            ],
+            [
+              "Tukwila",
+              1717
+            ],
+            [
+              "Redmond",
+              1478
+            ],
+            [
+              "Bothell",
+              1265
+            ],
+            [
+              "Renton",
+              997
+            ],
+            [
+              "Seatac",
+              970
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "291",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2023",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "0",
+            "county": "Snohomish",
+            "city": "Bothell"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2021",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "0",
+            "county": "Kitsap",
+            "city": "Suquamish"
+          },
+          {
+            "make": "BMW",
+            "model": "X5",
+            "year": "2022",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "30",
+            "county": "King",
+            "city": "Auburn"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "291",
+            "county": "King",
+            "city": "Seattle"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": "Model Year",
+        "description": "Vehicles from 2015 to 2018 (inclusive)",
+        "criteria": "Model Year >= 2015 AND Model Year <= 2018",
+        "analysis": {
+          "totalVehicles": 9101,
+          "totalBEV": 6238,
+          "totalPHEV": 2863,
+          "avgRange": 131.69,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "King",
+            "Thurston",
+            "Snohomish",
+            "Kitsap",
+            "Island",
+            "Yakima",
+            "Chelan",
+            "Skagit",
+            "Walla Walla",
+            "Stevens",
+            "Spokane",
+            "Kittitas",
+            "Whitman",
+            "Grant",
+            "Clark",
+            "Cowlitz",
+            "Jefferson",
+            "Clallam",
+            "Klickitat"
+          ],
+          "cities": [
+            "Issaquah",
+            "Yelm",
+            "Bothell",
+            "Port Orchard",
+            "Seattle",
+            "Olympia",
+            "Coupeville",
+            "Yakima",
+            "Bainbridge Island",
+            "Edmonds",
+            "Wenatchee",
+            "Mukilteo",
+            "Everett",
+            "Anacortes",
+            "Rochester",
+            "Walla Walla",
+            "Lynnwood",
+            "Olalla",
+            "Mill Creek",
+            "Chewelah",
+            "Spokane",
+            "Snohomish",
+            "Ellensburg",
+            "Bremerton",
+            "Chelan",
+            "Burien",
+            "Poulsbo",
+            "Vashon",
+            "Oak Harbor",
+            "Marysville",
+            "Pullman",
+            "Ravensdale",
+            "Brier",
+            "Cle Elum",
+            "Moses Lake",
+            "Kent",
+            "Federal Way",
+            "Kirkland",
+            "Shoreline",
+            "Vancouver",
+            "Redmond",
+            "Auburn",
+            "Sammamish",
+            "La Center",
+            "Tukwila",
+            "Bellevue",
+            "Camas",
+            "Duvall",
+            "Kenmore",
+            "Brush Prairie",
+            "Lake Stevens",
+            "Rainier",
+            "Kelso",
+            "Newcastle",
+            "Port Townsend",
+            "Colville",
+            "Silverdale",
+            "Renton",
+            "Battle Ground",
+            "Kingston",
+            "Lacey",
+            "Tenino",
+            "Woodinville",
+            "Algona",
+            "Woodland",
+            "Enumclaw",
+            "Nine Mile Falls",
+            "Des Moines",
+            "Suquamish",
+            "Port Ludlow",
+            "Tumwater",
+            "Selah",
+            "Kalama",
+            "Normandy Park",
+            "Longview",
+            "Ridgefield",
+            "Washougal",
+            "Toppenish",
+            "Seabeck",
+            "North Bend",
+            "Lake Forest Park",
+            "Port Angeles",
+            "Port Hadlock",
+            "Clyde Hill",
+            "Ariel",
+            "Covington",
+            "Castle Rock",
+            "Seatac",
+            "Sequim",
+            "Beaux Arts",
+            "Cowiche",
+            "Arlington",
+            "Sunnyside",
+            "Monroe",
+            "White Salmon",
+            "Medina",
+            "Brinnon",
+            "Pacific",
+            "Quilcene",
+            "Camano Island",
+            "Darrington",
+            "Sultan",
+            "Stanwood",
+            "Mercer Island",
+            "Nordland",
+            "Yacolt",
+            "Freeland",
+            "Woodway",
+            "Tulalip",
+            "Maple Valley",
+            "Indianola",
+            "Snoqualmie",
+            "Black Diamond",
+            "Silverlake",
+            "Milton",
+            "Grandview",
+            "Amboy",
+            "Centralia",
+            "Carnation",
+            "Chimacum",
+            "Hunts Point",
+            "Mountlake Terrace",
+            "Granite Falls",
+            "Moxee",
+            "Tieton",
+            "Gig Harbor",
+            "Yarrow Point",
+            "Hansville",
+            "Goldendale",
+            "Naches",
+            "Gold Bar"
+          ],
+          "makes": [
+            "TESLA",
+            "FORD",
+            "KIA",
+            "NISSAN",
+            "BMW",
+            "SMART",
+            "VOLKSWAGEN",
+            "TOYOTA",
+            "CHEVROLET",
+            "PORSCHE",
+            "CHRYSLER",
+            "HONDA",
+            "AUDI",
+            "MITSUBISHI",
+            "VOLVO",
+            "FIAT",
+            "MERCEDES-BENZ",
+            "CADILLAC",
+            "HYUNDAI",
+            "MINI"
+          ],
+          "models": [
+            "MODEL S",
+            "FUSION",
+            "OPTIMA",
+            "LEAF",
+            "NIRO",
+            "C-MAX",
+            "SOUL EV",
+            "I8",
+            "X5",
+            "FORTWO",
+            "I3",
+            "MODEL 3",
+            "E-GOLF",
+            "PRIUS PRIME",
+            "SOUL",
+            "MODEL X",
+            "BOLT EV",
+            "CAYENNE",
+            "VOLT",
+            "SPARK",
+            "PACIFICA",
+            "CLARITY",
+            "A3",
+            "OUTLANDER",
+            "EQ FORTWO",
+            "PRIUS PLUG-IN",
+            "XC90",
+            "330E",
+            "500",
+            "530E",
+            "XC60",
+            "GLE-CLASS",
+            "ELR",
+            "PANAMERA",
+            "IONIQ",
+            "B-CLASS",
+            "FORTWO ELECTRIC DRIVE",
+            "FOCUS",
+            "COUNTRYMAN",
+            "C-CLASS",
+            "GLC-CLASS",
+            "SONATA",
+            "740E",
+            "S90",
+            "S-CLASS",
+            "CT6",
+            "I-MIEV"
+          ],
+          "topMakes": [
+            [
+              "TESLA",
+              3544
+            ],
+            [
+              "NISSAN",
+              1483
+            ],
+            [
+              "CHEVROLET",
+              1150
+            ],
+            [
+              "BMW",
+              605
+            ],
+            [
+              "FORD",
+              428
+            ],
+            [
+              "TOYOTA",
+              421
+            ],
+            [
+              "KIA",
+              258
+            ],
+            [
+              "AUDI",
+              181
+            ],
+            [
+              "CHRYSLER",
+              169
+            ],
+            [
+              "FIAT",
+              165
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 6238,
+              "percentage": 68.54
+            },
+            "PHEV": {
+              "count": 2863,
+              "percentage": 31.46
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2018",
+              4092
+            ],
+            [
+              "2017",
+              2275
+            ],
+            [
+              "2016",
+              1468
+            ],
+            [
+              "2015",
+              1266
+            ]
+          ],
+          "topCounties": [
+            [
+              "King",
+              6632
+            ],
+            [
+              "Clark",
+              953
+            ],
+            [
+              "Kitsap",
+              506
+            ],
+            [
+              "Snohomish",
+              351
+            ],
+            [
+              "Thurston",
+              334
+            ],
+            [
+              "Jefferson",
+              112
+            ],
+            [
+              "Cowlitz",
+              82
+            ],
+            [
+              "Yakima",
+              56
+            ],
+            [
+              "Island",
+              40
+            ],
+            [
+              "Clallam",
+              10
+            ]
+          ],
+          "topCities": [
+            [
+              "Seattle",
+              2160
+            ],
+            [
+              "Bellevue",
+              867
+            ],
+            [
+              "Vancouver",
+              595
+            ],
+            [
+              "Kirkland",
+              533
+            ],
+            [
+              "Sammamish",
+              429
+            ],
+            [
+              "Redmond",
+              351
+            ],
+            [
+              "Shoreline",
+              306
+            ],
+            [
+              "Bothell",
+              262
+            ],
+            [
+              "Renton",
+              241
+            ],
+            [
+              "Olympia",
+              227
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "TESLA",
+            "model": "MODEL S",
+            "year": "2016",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "210",
+            "county": "King",
+            "city": "Issaquah"
+          },
+          {
+            "make": "FORD",
+            "model": "FUSION",
+            "year": "2017",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "21",
+            "county": "Thurston",
+            "city": "Yelm"
+          },
+          {
+            "make": "KIA",
+            "model": "OPTIMA",
+            "year": "2018",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "29",
+            "county": "Snohomish",
+            "city": "Bothell"
+          },
+          {
+            "make": "NISSAN",
+            "model": "LEAF",
+            "year": "2015",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "84",
+            "county": "Kitsap",
+            "city": "Port Orchard"
+          },
+          {
+            "make": "NISSAN",
+            "model": "LEAF",
+            "year": "2015",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "84",
+            "county": "King",
+            "city": "Seattle"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "type": "Electric Range",
+        "description": "Vehicles with electric range greater than 200 miles and less than 300 miles",
+        "criteria": "Electric Range > 200 AND Electric Range < 300",
+        "analysis": {
+          "totalVehicles": 8147,
+          "totalBEV": 8147,
+          "totalPHEV": 0,
+          "avgRange": 234.99,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "King",
+            "Yakima",
+            "Thurston",
+            "Snohomish",
+            "Kitsap",
+            "Island",
+            "Walla Walla",
+            "Grant",
+            "Stevens",
+            "Spokane",
+            "Chelan",
+            "Skagit",
+            "Clark",
+            "Cowlitz",
+            "Jefferson",
+            "Klickitat",
+            "Clallam"
+          ],
+          "cities": [
+            "Seattle",
+            "Issaquah",
+            "Yakima",
+            "Rochester",
+            "Bothell",
+            "Tenino",
+            "Lacey",
+            "Renton",
+            "Olympia",
+            "Port Orchard",
+            "Bainbridge Island",
+            "Everett",
+            "Kingston",
+            "Mukilteo",
+            "Bremerton",
+            "Edmonds",
+            "Oak Harbor",
+            "Snohomish",
+            "Walla Walla",
+            "Mill Creek",
+            "Moses Lake",
+            "Lynnwood",
+            "Moxee",
+            "Chewelah",
+            "Spokane",
+            "Clinton",
+            "Burien",
+            "Cashmere",
+            "Wenatchee",
+            "Coupeville",
+            "Langley",
+            "Mount Vernon",
+            "Kent",
+            "Federal Way",
+            "Kirkland",
+            "Redmond",
+            "Vancouver",
+            "Bellevue",
+            "Medina",
+            "Newcastle",
+            "Auburn",
+            "Brush Prairie",
+            "Rainier",
+            "Sammamish",
+            "Silverdale",
+            "Shoreline",
+            "Seabeck",
+            "Des Moines",
+            "Lake Stevens",
+            "Camas",
+            "Battle Ground",
+            "Woodinville",
+            "Maple Valley",
+            "Yelm",
+            "Tumwater",
+            "Suquamish",
+            "Nine Mile Falls",
+            "Covington",
+            "Woodland",
+            "Normandy Park",
+            "Kalama",
+            "Ridgefield",
+            "Port Townsend",
+            "Monroe",
+            "Poulsbo",
+            "Washougal",
+            "Longview",
+            "Toppenish",
+            "North Bend",
+            "Kenmore",
+            "Lake Forest Park",
+            "Port Hadlock",
+            "Enumclaw",
+            "Silverlake",
+            "Olalla",
+            "Tukwila",
+            "Skykomish",
+            "Selah",
+            "Algona",
+            "Castle Rock",
+            "Seatac",
+            "Quilcene",
+            "Beaux Arts",
+            "Sunnyside",
+            "Mercer Island",
+            "Marysville",
+            "White Salmon",
+            "Arlington",
+            "Clyde Hill",
+            "Port Ludlow",
+            "Pacific",
+            "Port Angeles",
+            "Naches",
+            "Duvall",
+            "Forks",
+            "Darrington",
+            "La Center",
+            "Kelso",
+            "Nordland",
+            "Ariel",
+            "Camano Island",
+            "Woodway",
+            "Brinnon",
+            "Yacolt",
+            "Brier",
+            "Carnation",
+            "Black Diamond",
+            "Snoqualmie",
+            "Stanwood",
+            "Grandview",
+            "Hunts Point",
+            "Sequim",
+            "Granite Falls",
+            "Yarrow Point",
+            "Zillah",
+            "Indianola",
+            "Gig Harbor",
+            "Amboy",
+            "Milton",
+            "Hansville",
+            "Goldendale",
+            "Colville"
+          ],
+          "makes": [
+            "TESLA",
+            "AUDI",
+            "KIA",
+            "NISSAN",
+            "HYUNDAI",
+            "CHEVROLET",
+            "JAGUAR",
+            "PORSCHE",
+            "POLESTAR"
+          ],
+          "models": [
+            "MODEL Y",
+            "MODEL S",
+            "MODEL 3",
+            "E-TRON",
+            "NIRO",
+            "LEAF",
+            "KONA",
+            "MODEL X",
+            "BOLT EV",
+            "I-PACE",
+            "E-TRON SPORTBACK",
+            "TAYCAN",
+            "PS2",
+            "ROADSTER"
+          ],
+          "topMakes": [
+            [
+              "TESLA",
+              6340
+            ],
+            [
+              "CHEVROLET",
+              1076
+            ],
+            [
+              "KIA",
+              246
+            ],
+            [
+              "AUDI",
+              216
+            ],
+            [
+              "NISSAN",
+              77
+            ],
+            [
+              "HYUNDAI",
+              66
+            ],
+            [
+              "JAGUAR",
+              49
+            ],
+            [
+              "PORSCHE",
+              41
+            ],
+            [
+              "POLESTAR",
+              36
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 8147,
+              "percentage": 100
+            },
+            "PHEV": {
+              "count": 0,
+              "percentage": 0
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2021",
+              113
+            ],
+            [
+              "2020",
+              1996
+            ],
+            [
+              "2019",
+              1950
+            ],
+            [
+              "2018",
+              2494
+            ],
+            [
+              "2017",
+              612
+            ],
+            [
+              "2016",
+              254
+            ],
+            [
+              "2015",
+              280
+            ],
+            [
+              "2014",
+              181
+            ],
+            [
+              "2013",
+              205
+            ],
+            [
+              "2012",
+              47
+            ]
+          ],
+          "topCounties": [
+            [
+              "King",
+              6130
+            ],
+            [
+              "Clark",
+              743
+            ],
+            [
+              "Snohomish",
+              415
+            ],
+            [
+              "Kitsap",
+              358
+            ],
+            [
+              "Thurston",
+              262
+            ],
+            [
+              "Cowlitz",
+              73
+            ],
+            [
+              "Jefferson",
+              59
+            ],
+            [
+              "Yakima",
+              54
+            ],
+            [
+              "Island",
+              23
+            ],
+            [
+              "Clallam",
+              11
+            ]
+          ],
+          "topCities": [
+            [
+              "Seattle",
+              1857
+            ],
+            [
+              "Bellevue",
+              880
+            ],
+            [
+              "Kirkland",
+              542
+            ],
+            [
+              "Sammamish",
+              495
+            ],
+            [
+              "Vancouver",
+              449
+            ],
+            [
+              "Redmond",
+              379
+            ],
+            [
+              "Bothell",
+              271
+            ],
+            [
+              "Renton",
+              201
+            ],
+            [
+              "Shoreline",
+              200
+            ],
+            [
+              "Issaquah",
+              188
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "291",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL S",
+            "year": "2019",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "270",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL S",
+            "year": "2016",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "210",
+            "county": "King",
+            "city": "Issaquah"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "291",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "year": "2019",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "220",
+            "county": "Yakima",
+            "city": "Yakima"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "type": "Electric Range",
+        "description": "Vehicles with electric range between 100 and 150 miles (inclusive)",
+        "criteria": "Electric Range >= 100 AND Electric Range <= 150",
+        "analysis": {
+          "totalVehicles": 1162,
+          "totalBEV": 1108,
+          "totalPHEV": 54,
+          "avgRange": 129.68,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "Kitsap",
+            "Snohomish",
+            "Thurston",
+            "King",
+            "Chelan",
+            "Clark",
+            "Jefferson",
+            "Cowlitz",
+            "Yakima",
+            "Island"
+          ],
+          "cities": [
+            "Bainbridge Island",
+            "Bothell",
+            "Olympia",
+            "Pacific",
+            "Wenatchee",
+            "Snohomish",
+            "Edmonds",
+            "Kirkland",
+            "Poulsbo",
+            "Shoreline",
+            "Auburn",
+            "Bellevue",
+            "Kent",
+            "Vancouver",
+            "Redmond",
+            "Burien",
+            "Seattle",
+            "Federal Way",
+            "Issaquah",
+            "Port Townsend",
+            "Kenmore",
+            "Renton",
+            "Maple Valley",
+            "Yacolt",
+            "Yelm",
+            "Sammamish",
+            "Mill Creek",
+            "Newcastle",
+            "Battle Ground",
+            "Camas",
+            "Rochester",
+            "Port Ludlow",
+            "Bremerton",
+            "Ridgefield",
+            "Woodland",
+            "Washougal",
+            "Lake Stevens",
+            "Granite Falls",
+            "Woodinville",
+            "Lake Forest Park",
+            "Tumwater",
+            "Tukwila",
+            "Des Moines",
+            "Monroe",
+            "Lynnwood",
+            "Rainier",
+            "Nordland",
+            "Seatac",
+            "Olalla",
+            "Duvall",
+            "Mukilteo",
+            "Yakima",
+            "Port Orchard",
+            "Normandy Park",
+            "Castle Rock",
+            "Brush Prairie",
+            "Beaux Arts",
+            "Indianola",
+            "Everett",
+            "Oak Harbor",
+            "Brier",
+            "Sequim",
+            "Chimacum",
+            "Longview",
+            "Mountlake Terrace",
+            "Covington",
+            "Amboy",
+            "Mercer Island",
+            "Kalama",
+            "Kingston",
+            "Lacey",
+            "Carnation",
+            "Medina",
+            "Snoqualmie",
+            "Suquamish",
+            "Sultan"
+          ],
+          "makes": [
+            "BMW",
+            "NISSAN",
+            "TOYOTA",
+            "VOLKSWAGEN",
+            "MINI",
+            "KIA",
+            "TH!NK",
+            "HYUNDAI",
+            "FORD"
+          ],
+          "models": [
+            "I3",
+            "LEAF",
+            "RAV4",
+            "E-GOLF",
+            "HARDTOP",
+            "SOUL EV",
+            "CITY",
+            "IONIQ",
+            "FOCUS"
+          ],
+          "topMakes": [
+            [
+              "NISSAN",
+              784
+            ],
+            [
+              "VOLKSWAGEN",
+              202
+            ],
+            [
+              "BMW",
+              83
+            ],
+            [
+              "MINI",
+              31
+            ],
+            [
+              "KIA",
+              25
+            ],
+            [
+              "TOYOTA",
+              17
+            ],
+            [
+              "HYUNDAI",
+              10
+            ],
+            [
+              "FORD",
+              9
+            ],
+            [
+              "TH!NK",
+              1
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 1108,
+              "percentage": 95.35
+            },
+            "PHEV": {
+              "count": 54,
+              "percentage": 4.65
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2021",
+              33
+            ],
+            [
+              "2020",
+              117
+            ],
+            [
+              "2019",
+              610
+            ],
+            [
+              "2018",
+              65
+            ],
+            [
+              "2017",
+              319
+            ],
+            [
+              "2014",
+              7
+            ],
+            [
+              "2013",
+              6
+            ],
+            [
+              "2012",
+              4
+            ],
+            [
+              "2011",
+              1
+            ]
+          ],
+          "topCounties": [
+            [
+              "King",
+              869
+            ],
+            [
+              "Clark",
+              121
+            ],
+            [
+              "Kitsap",
+              59
+            ],
+            [
+              "Thurston",
+              41
+            ],
+            [
+              "Snohomish",
+              37
+            ],
+            [
+              "Jefferson",
+              24
+            ],
+            [
+              "Cowlitz",
+              8
+            ],
+            [
+              "Chelan",
+              1
+            ],
+            [
+              "Yakima",
+              1
+            ],
+            [
+              "Island",
+              1
+            ]
+          ],
+          "topCities": [
+            [
+              "Seattle",
+              340
+            ],
+            [
+              "Bellevue",
+              97
+            ],
+            [
+              "Vancouver",
+              83
+            ],
+            [
+              "Kirkland",
+              68
+            ],
+            [
+              "Shoreline",
+              54
+            ],
+            [
+              "Redmond",
+              40
+            ],
+            [
+              "Sammamish",
+              38
+            ],
+            [
+              "Bothell",
+              35
+            ],
+            [
+              "Olympia",
+              27
+            ],
+            [
+              "Bainbridge Island",
+              23
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "BMW",
+            "model": "I3",
+            "year": "2019",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "126",
+            "county": "Kitsap",
+            "city": "Bainbridge Island"
+          },
+          {
+            "make": "NISSAN",
+            "model": "LEAF",
+            "year": "2017",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "107",
+            "county": "Snohomish",
+            "city": "Bothell"
+          },
+          {
+            "make": "NISSAN",
+            "model": "LEAF",
+            "year": "2017",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "107",
+            "county": "Thurston",
+            "city": "Olympia"
+          },
+          {
+            "make": "NISSAN",
+            "model": "LEAF",
+            "year": "2019",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "150",
+            "county": "Thurston",
+            "city": "Olympia"
+          },
+          {
+            "make": "TOYOTA",
+            "model": "RAV4",
+            "year": "2014",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "103",
+            "county": "King",
+            "city": "Pacific"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "type": "Electric Range",
+        "description": "Vehicles with electric range less than 50 miles",
+        "criteria": "Electric Range > 0 AND Electric Range < 50",
+        "analysis": {
+          "totalVehicles": 9569,
+          "totalBEV": 2,
+          "totalPHEV": 9567,
+          "avgRange": 27,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "Thurston",
+            "Snohomish",
+            "King",
+            "Yakima",
+            "Skagit",
+            "Spokane",
+            "Grant",
+            "Whitman",
+            "Kittitas",
+            "Kitsap",
+            "Stevens",
+            "Island",
+            "Pend Oreille",
+            "Walla Walla",
+            "Clark",
+            "Cowlitz",
+            "Jefferson",
+            "Clallam",
+            "Klickitat"
+          ],
+          "cities": [
+            "Yelm",
+            "Bothell",
+            "Auburn",
+            "Lynnwood",
+            "Yakima",
+            "Seattle",
+            "Olympia",
+            "Tenino",
+            "Edmonds",
+            "Anacortes",
+            "Spokane",
+            "Snohomish",
+            "Ephrata",
+            "Pullman",
+            "Ellensburg",
+            "Bremerton",
+            "Moses Lake",
+            "Kettle Falls",
+            "Oak Harbor",
+            "Everett",
+            "Marysville",
+            "Newport",
+            "Walla Walla",
+            "Poulsbo",
+            "Tukwila",
+            "Bellevue",
+            "Shoreline",
+            "Kirkland",
+            "Vancouver",
+            "Duvall",
+            "Bainbridge Island",
+            "La Center",
+            "Rainier",
+            "Redmond",
+            "Seatac",
+            "Camas",
+            "Kenmore",
+            "Lake Stevens",
+            "Longview",
+            "Silverdale",
+            "Kent",
+            "Kelso",
+            "Ariel",
+            "Port Ludlow",
+            "Washougal",
+            "Federal Way",
+            "Sammamish",
+            "Arlington",
+            "Renton",
+            "Port Townsend",
+            "Issaquah",
+            "Burien",
+            "Port Orchard",
+            "Mill Creek",
+            "Seabeck",
+            "Battle Ground",
+            "Brush Prairie",
+            "Lake Forest Park",
+            "Newcastle",
+            "Woodinville",
+            "Beaux Arts",
+            "Woodland",
+            "Kalama",
+            "Monroe",
+            "Mercer Island",
+            "Sunnyside",
+            "Nine Mile Falls",
+            "Grandview",
+            "Ridgefield",
+            "Tumwater",
+            "Olalla",
+            "Selah",
+            "Port Angeles",
+            "Castle Rock",
+            "Kingston",
+            "Des Moines",
+            "Rochester",
+            "North Bend",
+            "Goldendale",
+            "Medina",
+            "Camano Island",
+            "Silverlake",
+            "Coupeville",
+            "Clyde Hill",
+            "Mukilteo",
+            "Indianola",
+            "Pacific",
+            "Sequim",
+            "Port Hadlock",
+            "Normandy Park",
+            "Brinnon",
+            "Covington",
+            "White Salmon",
+            "Lacey",
+            "Wapato",
+            "Colville",
+            "Enumclaw",
+            "Sultan",
+            "Naches",
+            "Nordland",
+            "Algona",
+            "Moxee",
+            "Mountlake Terrace",
+            "Maple Valley",
+            "Suquamish",
+            "Gold Bar",
+            "Snoqualmie",
+            "Milton",
+            "Black Diamond",
+            "Chimacum",
+            "Toppenish",
+            "Yacolt",
+            "Hansville",
+            "Outlook",
+            "Stanwood",
+            "Union Gap",
+            "Granite Falls",
+            "Zillah",
+            "Yarrow Point",
+            "Amboy",
+            "Hunts Point",
+            "Carnation",
+            "Quilcene",
+            "Freeland"
+          ],
+          "makes": [
+            "FORD",
+            "KIA",
+            "BMW",
+            "AUDI",
+            "TOYOTA",
+            "JEEP",
+            "PORSCHE",
+            "CHEVROLET",
+            "HYUNDAI",
+            "CHRYSLER",
+            "HONDA",
+            "MITSUBISHI",
+            "LEXUS",
+            "DODGE",
+            "VOLVO",
+            "MERCEDES-BENZ",
+            "LAND ROVER",
+            "ALFA ROMEO",
+            "SUBARU",
+            "MAZDA",
+            "MINI",
+            "FISKER",
+            "LINCOLN",
+            "CADILLAC",
+            "BENTLEY"
+          ],
+          "models": [
+            "FUSION",
+            "OPTIMA",
+            "X5",
+            "Q5 E",
+            "C-MAX",
+            "NIRO",
+            "I8",
+            "SORENTO",
+            "PRIUS PRIME",
+            "WRANGLER",
+            "X3",
+            "RAV4 PRIME",
+            "ESCAPE",
+            "CAYENNE",
+            "VOLT",
+            "SANTA FE",
+            "330E",
+            "TUCSON",
+            "PACIFICA",
+            "CLARITY",
+            "A3",
+            "OUTLANDER",
+            "NX",
+            "HORNET",
+            "SPORTAGE",
+            "XC60",
+            "PRIUS PLUG-IN",
+            "GLE-CLASS",
+            "XC90",
+            "GRAND CHEROKEE",
+            "GLC-CLASS",
+            "RANGE ROVER SPORT",
+            "PRIUS",
+            "TONALE",
+            "530E",
+            "CROSSTREK",
+            "745E",
+            "Q5",
+            "ACCORD",
+            "V60",
+            "CX-90",
+            "S60",
+            "COUNTRYMAN",
+            "KARMA",
+            "AVIATOR",
+            "IONIQ",
+            "ELR",
+            "PANAMERA",
+            "740E",
+            "CORSAIR",
+            "RANGE ROVER",
+            "C-CLASS",
+            "S90",
+            "SONATA",
+            "A7",
+            "FLYING SPUR",
+            "A8 E",
+            "XM",
+            "S-CLASS",
+            "CT6"
+          ],
+          "topMakes": [
+            [
+              "TOYOTA",
+              1482
+            ],
+            [
+              "JEEP",
+              1399
+            ],
+            [
+              "BMW",
+              1106
+            ],
+            [
+              "CHRYSLER",
+              908
+            ],
+            [
+              "FORD",
+              804
+            ],
+            [
+              "VOLVO",
+              800
+            ],
+            [
+              "KIA",
+              583
+            ],
+            [
+              "CHEVROLET",
+              491
+            ],
+            [
+              "AUDI",
+              435
+            ],
+            [
+              "DODGE",
+              412
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 2,
+              "percentage": 0.02
+            },
+            "PHEV": {
+              "count": 9567,
+              "percentage": 99.98
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2024",
+              1156
+            ],
+            [
+              "2023",
+              2518
+            ],
+            [
+              "2022",
+              1091
+            ],
+            [
+              "2021",
+              977
+            ],
+            [
+              "2020",
+              440
+            ],
+            [
+              "2019",
+              417
+            ],
+            [
+              "2018",
+              929
+            ],
+            [
+              "2017",
+              589
+            ],
+            [
+              "2016",
+              324
+            ],
+            [
+              "2015",
+              210
+            ]
+          ],
+          "topCounties": [
+            [
+              "King",
+              6910
+            ],
+            [
+              "Clark",
+              1115
+            ],
+            [
+              "Kitsap",
+              508
+            ],
+            [
+              "Thurston",
+              333
+            ],
+            [
+              "Snohomish",
+              321
+            ],
+            [
+              "Cowlitz",
+              114
+            ],
+            [
+              "Jefferson",
+              104
+            ],
+            [
+              "Yakima",
+              86
+            ],
+            [
+              "Island",
+              40
+            ],
+            [
+              "Clallam",
+              14
+            ]
+          ],
+          "topCities": [
+            [
+              "Seattle",
+              1938
+            ],
+            [
+              "Tukwila",
+              1543
+            ],
+            [
+              "Vancouver",
+              683
+            ],
+            [
+              "Bellevue",
+              595
+            ],
+            [
+              "Kirkland",
+              380
+            ],
+            [
+              "Sammamish",
+              308
+            ],
+            [
+              "Redmond",
+              251
+            ],
+            [
+              "Shoreline",
+              223
+            ],
+            [
+              "Bothell",
+              221
+            ],
+            [
+              "Renton",
+              210
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "FORD",
+            "model": "FUSION",
+            "year": "2017",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "21",
+            "county": "Thurston",
+            "city": "Yelm"
+          },
+          {
+            "make": "KIA",
+            "model": "OPTIMA",
+            "year": "2018",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "29",
+            "county": "Snohomish",
+            "city": "Bothell"
+          },
+          {
+            "make": "BMW",
+            "model": "X5",
+            "year": "2022",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "30",
+            "county": "King",
+            "city": "Auburn"
+          },
+          {
+            "make": "AUDI",
+            "model": "Q5 E",
+            "year": "2021",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "18",
+            "county": "Snohomish",
+            "city": "Lynnwood"
+          },
+          {
+            "make": "FORD",
+            "model": "C-MAX",
+            "year": "2013",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "19",
+            "county": "Yakima",
+            "city": "Yakima"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "type": "Make",
+        "description": "Tesla vehicles only",
+        "criteria": "Make = TESLA",
+        "analysis": {
+          "totalVehicles": 23127,
+          "totalBEV": 23127,
+          "totalPHEV": 0,
+          "avgRange": 240.56,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "King",
+            "Snohomish",
+            "Kitsap",
+            "Yakima",
+            "Thurston",
+            "Island",
+            "Walla Walla",
+            "Grant",
+            "Stevens",
+            "Whitman",
+            "Skagit",
+            "Chelan",
+            "Kittitas",
+            "Clark",
+            "Cowlitz",
+            "Jefferson",
+            "Klickitat",
+            "Clallam"
+          ],
+          "cities": [
+            "Seattle",
+            "Bothell",
+            "Issaquah",
+            "Suquamish",
+            "Yakima",
+            "Lacey",
+            "Olympia",
+            "Rochester",
+            "Tenino",
+            "Port Orchard",
+            "Bainbridge Island",
+            "Kingston",
+            "Mukilteo",
+            "Bremerton",
+            "Edmonds",
+            "Oak Harbor",
+            "Snohomish",
+            "Walla Walla",
+            "Everett",
+            "Moses Lake",
+            "Lynnwood",
+            "Moxee",
+            "Chewelah",
+            "Freeland",
+            "Monroe",
+            "Quincy",
+            "Pullman",
+            "Burien",
+            "Anacortes",
+            "Wenatchee",
+            "Chelan",
+            "Coupeville",
+            "Cle Elum",
+            "Kent",
+            "Bellevue",
+            "Kirkland",
+            "Redmond",
+            "Vancouver",
+            "Seabeck",
+            "North Bend",
+            "Woodinville",
+            "Mill Creek",
+            "Federal Way",
+            "Shoreline",
+            "Brush Prairie",
+            "Castle Rock",
+            "Tukwila",
+            "Sammamish",
+            "Auburn",
+            "Renton",
+            "Newcastle",
+            "Normandy Park",
+            "Medina",
+            "Camas",
+            "Clyde Hill",
+            "Kelso",
+            "Silverdale",
+            "Lake Stevens",
+            "Lake Forest Park",
+            "Arlington",
+            "Poulsbo",
+            "Port Townsend",
+            "Washougal",
+            "Olalla",
+            "Battle Ground",
+            "Camano Island",
+            "Woodway",
+            "Selah",
+            "Duvall",
+            "Woodland",
+            "Maple Valley",
+            "Yelm",
+            "Rainier",
+            "Des Moines",
+            "Pacific",
+            "Nine Mile Falls",
+            "Covington",
+            "Kenmore",
+            "Port Ludlow",
+            "Marysville",
+            "Algona",
+            "Kalama",
+            "Ridgefield",
+            "Mountlake Terrace",
+            "Seatac",
+            "Longview",
+            "Mercer Island",
+            "Toppenish",
+            "Bucoda",
+            "Tumwater",
+            "Port Hadlock",
+            "Silverlake",
+            "Beaux Arts",
+            "Skykomish",
+            "Zillah",
+            "Granger",
+            "La Center",
+            "Sunnyside",
+            "Mabton",
+            "White Salmon",
+            "Port Angeles",
+            "Quilcene",
+            "Naches",
+            "Sequim",
+            "Forks",
+            "Darrington",
+            "Nordland",
+            "Enumclaw",
+            "Indianola",
+            "Bingen",
+            "Brinnon",
+            "Snoqualmie",
+            "Brier",
+            "Black Diamond",
+            "Carnation",
+            "Yacolt",
+            "Union Gap",
+            "Grandview",
+            "Centralia",
+            "Colville",
+            "Stanwood",
+            "Granite Falls",
+            "Gold Bar",
+            "Hunts Point",
+            "Outlook",
+            "Gig Harbor",
+            "Yarrow Point",
+            "Amboy",
+            "Milton",
+            "Ariel",
+            "Hansville",
+            "Toutle"
+          ],
+          "makes": [
+            "TESLA"
+          ],
+          "models": [
+            "MODEL Y",
+            "MODEL S",
+            "MODEL 3",
+            "MODEL X",
+            "ROADSTER"
+          ],
+          "topMakes": [
+            [
+              "TESLA",
+              23127
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 23127,
+              "percentage": 100
+            },
+            "PHEV": {
+              "count": 0,
+              "percentage": 0
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2024",
+              169
+            ],
+            [
+              "2023",
+              8194
+            ],
+            [
+              "2022",
+              4236
+            ],
+            [
+              "2021",
+              3120
+            ],
+            [
+              "2020",
+              2058
+            ],
+            [
+              "2019",
+              1358
+            ],
+            [
+              "2018",
+              2354
+            ],
+            [
+              "2017",
+              478
+            ],
+            [
+              "2016",
+              432
+            ],
+            [
+              "2015",
+              280
+            ]
+          ],
+          "topCounties": [
+            [
+              "King",
+              17838
+            ],
+            [
+              "Clark",
+              2000
+            ],
+            [
+              "Snohomish",
+              1585
+            ],
+            [
+              "Kitsap",
+              704
+            ],
+            [
+              "Thurston",
+              506
+            ],
+            [
+              "Cowlitz",
+              169
+            ],
+            [
+              "Yakima",
+              130
+            ],
+            [
+              "Jefferson",
+              78
+            ],
+            [
+              "Island",
+              60
+            ],
+            [
+              "Clallam",
+              24
+            ]
+          ],
+          "topCities": [
+            [
+              "Seattle",
+              4171
+            ],
+            [
+              "Bellevue",
+              2686
+            ],
+            [
+              "Sammamish",
+              1639
+            ],
+            [
+              "Kirkland",
+              1424
+            ],
+            [
+              "Redmond",
+              1263
+            ],
+            [
+              "Vancouver",
+              1242
+            ],
+            [
+              "Bothell",
+              1055
+            ],
+            [
+              "Renton",
+              791
+            ],
+            [
+              "Kent",
+              712
+            ],
+            [
+              "Seatac",
+              583
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "291",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2023",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "0",
+            "county": "Snohomish",
+            "city": "Bothell"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL S",
+            "year": "2019",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "270",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL S",
+            "year": "2016",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "210",
+            "county": "King",
+            "city": "Issaquah"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2021",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "0",
+            "county": "Kitsap",
+            "city": "Suquamish"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "type": "Make",
+        "description": "Nissan vehicles only",
+        "criteria": "Make = NISSAN",
+        "analysis": {
+          "totalVehicles": 3909,
+          "totalBEV": 3909,
+          "totalPHEV": 0,
+          "avgRange": 105.41,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "Yakima",
+            "Kitsap",
+            "King",
+            "Snohomish",
+            "Thurston",
+            "Chelan",
+            "Skagit",
+            "Kittitas",
+            "Island",
+            "Grant",
+            "Clark",
+            "Jefferson",
+            "Stevens",
+            "Cowlitz",
+            "Klickitat",
+            "Clallam"
+          ],
+          "cities": [
+            "Yakima",
+            "Port Orchard",
+            "Seattle",
+            "Lynnwood",
+            "Bothell",
+            "Olympia",
+            "Tenino",
+            "Shoreline",
+            "Renton",
+            "Wenatchee",
+            "Everett",
+            "Snohomish",
+            "Anacortes",
+            "Monroe",
+            "Olalla",
+            "Ellensburg",
+            "Freeland",
+            "Poulsbo",
+            "Langley",
+            "Moses Lake",
+            "Ravensdale",
+            "Edmonds",
+            "Mukilteo",
+            "Redmond",
+            "Kirkland",
+            "Federal Way",
+            "Sammamish",
+            "Bellevue",
+            "Yacolt",
+            "Rochester",
+            "Duvall",
+            "Auburn",
+            "Kent",
+            "Vancouver",
+            "Mill Creek",
+            "Port Townsend",
+            "Burien",
+            "Seabeck",
+            "Newcastle",
+            "Issaquah",
+            "Camas",
+            "Kenmore",
+            "Sequim",
+            "Bainbridge Island",
+            "Nine Mile Falls",
+            "Lacey",
+            "Maple Valley",
+            "Woodinville",
+            "Sultan",
+            "Yelm",
+            "Lake Stevens",
+            "Bremerton",
+            "Longview",
+            "Washougal",
+            "Lake Forest Park",
+            "Brush Prairie",
+            "Tukwila",
+            "Silverdale",
+            "Port Ludlow",
+            "Kingston",
+            "Oak Harbor",
+            "Covington",
+            "Woodland",
+            "Port Hadlock",
+            "Seatac",
+            "Ridgefield",
+            "Normandy Park",
+            "Rainier",
+            "Battle Ground",
+            "Tumwater",
+            "Des Moines",
+            "Beaux Arts",
+            "Camano Island",
+            "Nordland",
+            "North Bend",
+            "Stanwood",
+            "La Center",
+            "Marysville",
+            "Coupeville",
+            "White Salmon",
+            "Toppenish",
+            "Enumclaw",
+            "Suquamish",
+            "Castle Rock",
+            "Tulalip",
+            "Arlington",
+            "Indianola",
+            "Medina",
+            "Silverlake",
+            "Black Diamond",
+            "Snoqualmie",
+            "Kelso",
+            "Granite Falls",
+            "Mercer Island",
+            "Chimacum",
+            "Mountlake Terrace",
+            "Quilcene",
+            "Amboy",
+            "Algona",
+            "Kalama",
+            "Keyport",
+            "Carnation",
+            "Port Angeles",
+            "Hansville",
+            "Bingen",
+            "Brier"
+          ],
+          "makes": [
+            "NISSAN"
+          ],
+          "models": [
+            "LEAF",
+            "ARIYA"
+          ],
+          "topMakes": [
+            [
+              "NISSAN",
+              3909
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 3909,
+              "percentage": 100
+            },
+            "PHEV": {
+              "count": 0,
+              "percentage": 0
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2024",
+              21
+            ],
+            [
+              "2023",
+              318
+            ],
+            [
+              "2022",
+              288
+            ],
+            [
+              "2021",
+              197
+            ],
+            [
+              "2020",
+              197
+            ],
+            [
+              "2019",
+              391
+            ],
+            [
+              "2018",
+              368
+            ],
+            [
+              "2017",
+              287
+            ],
+            [
+              "2016",
+              322
+            ],
+            [
+              "2015",
+              506
+            ]
+          ],
+          "topCounties": [
+            [
+              "King",
+              2842
+            ],
+            [
+              "Clark",
+              405
+            ],
+            [
+              "Kitsap",
+              233
+            ],
+            [
+              "Thurston",
+              162
+            ],
+            [
+              "Snohomish",
+              133
+            ],
+            [
+              "Jefferson",
+              71
+            ],
+            [
+              "Cowlitz",
+              27
+            ],
+            [
+              "Island",
+              14
+            ],
+            [
+              "Yakima",
+              9
+            ],
+            [
+              "Clallam",
+              4
+            ]
+          ],
+          "topCities": [
+            [
+              "Seattle",
+              997
+            ],
+            [
+              "Bellevue",
+              336
+            ],
+            [
+              "Vancouver",
+              263
+            ],
+            [
+              "Shoreline",
+              217
+            ],
+            [
+              "Kirkland",
+              196
+            ],
+            [
+              "Redmond",
+              170
+            ],
+            [
+              "Sammamish",
+              151
+            ],
+            [
+              "Bothell",
+              114
+            ],
+            [
+              "Olympia",
+              114
+            ],
+            [
+              "Renton",
+              93
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "NISSAN",
+            "model": "LEAF",
+            "year": "2013",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "75",
+            "county": "Yakima",
+            "city": "Yakima"
+          },
+          {
+            "make": "NISSAN",
+            "model": "LEAF",
+            "year": "2015",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "84",
+            "county": "Kitsap",
+            "city": "Port Orchard"
+          },
+          {
+            "make": "NISSAN",
+            "model": "LEAF",
+            "year": "2015",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "84",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "NISSAN",
+            "model": "LEAF",
+            "year": "2013",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "75",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "NISSAN",
+            "model": "LEAF",
+            "year": "2013",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "75",
+            "county": "Snohomish",
+            "city": "Lynnwood"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "type": "Make",
+        "description": "BMW vehicles only",
+        "criteria": "Make = BMW",
+        "analysis": {
+          "totalVehicles": 2214,
+          "totalBEV": 732,
+          "totalPHEV": 1482,
+          "avgRange": 46.42,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "King",
+            "Kitsap",
+            "Snohomish",
+            "Thurston",
+            "Yakima",
+            "Kittitas",
+            "Island",
+            "Jefferson",
+            "Clark",
+            "Cowlitz",
+            "Stevens"
+          ],
+          "cities": [
+            "Auburn",
+            "Bainbridge Island",
+            "Renton",
+            "Seattle",
+            "Bothell",
+            "Olympia",
+            "Snohomish",
+            "Yakima",
+            "Ellensburg",
+            "Edmonds",
+            "Lynnwood",
+            "Oak Harbor",
+            "Vashon",
+            "Marysville",
+            "Redmond",
+            "Bellevue",
+            "Tukwila",
+            "Kirkland",
+            "Newcastle",
+            "Port Townsend",
+            "Issaquah",
+            "Sammamish",
+            "Vancouver",
+            "Mill Creek",
+            "Shoreline",
+            "Lake Forest Park",
+            "Kent",
+            "Woodinville",
+            "Beaux Arts",
+            "Woodland",
+            "Mercer Island",
+            "Sunnyside",
+            "Ridgefield",
+            "Medina",
+            "Camas",
+            "Kingston",
+            "Clyde Hill",
+            "Selah",
+            "Bremerton",
+            "Burien",
+            "Seabeck",
+            "Battle Ground",
+            "Longview",
+            "Federal Way",
+            "Des Moines",
+            "La Center",
+            "Everett",
+            "Kenmore",
+            "Brush Prairie",
+            "Mukilteo",
+            "Poulsbo",
+            "Arlington",
+            "North Bend",
+            "Monroe",
+            "Port Ludlow",
+            "Lake Stevens",
+            "Quilcene",
+            "Rainier",
+            "Normandy Park",
+            "Indianola",
+            "Tenino",
+            "Silverdale",
+            "Yelm",
+            "Seatac",
+            "Yacolt",
+            "Washougal",
+            "Lacey",
+            "Kelso",
+            "Covington",
+            "Snoqualmie",
+            "Port Orchard",
+            "Kalama",
+            "Maple Valley",
+            "Pacific",
+            "Suquamish",
+            "Rochester",
+            "Duvall",
+            "Amboy",
+            "Centralia",
+            "Stanwood",
+            "Algona",
+            "Black Diamond",
+            "Zillah",
+            "Yarrow Point",
+            "Colville",
+            "Tumwater",
+            "Hunts Point",
+            "Hansville"
+          ],
+          "makes": [
+            "BMW"
+          ],
+          "models": [
+            "X5",
+            "I3",
+            "I8",
+            "X3",
+            "330E",
+            "I4",
+            "I5",
+            "530E",
+            "IX",
+            "745E",
+            "740E",
+            "I7",
+            "XM"
+          ],
+          "topMakes": [
+            [
+              "BMW",
+              2214
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 732,
+              "percentage": 33.06
+            },
+            "PHEV": {
+              "count": 1482,
+              "percentage": 66.94
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2024",
+              369
+            ],
+            [
+              "2023",
+              491
+            ],
+            [
+              "2022",
+              281
+            ],
+            [
+              "2021",
+              204
+            ],
+            [
+              "2020",
+              61
+            ],
+            [
+              "2019",
+              91
+            ],
+            [
+              "2018",
+              197
+            ],
+            [
+              "2017",
+              187
+            ],
+            [
+              "2016",
+              97
+            ],
+            [
+              "2015",
+              124
+            ]
+          ],
+          "topCounties": [
+            [
+              "King",
+              1767
+            ],
+            [
+              "Clark",
+              170
+            ],
+            [
+              "Snohomish",
+              104
+            ],
+            [
+              "Kitsap",
+              84
+            ],
+            [
+              "Thurston",
+              44
+            ],
+            [
+              "Cowlitz",
+              17
+            ],
+            [
+              "Yakima",
+              11
+            ],
+            [
+              "Jefferson",
+              10
+            ],
+            [
+              "Island",
+              5
+            ],
+            [
+              "Kittitas",
+              1
+            ]
+          ],
+          "topCities": [
+            [
+              "Seattle",
+              603
+            ],
+            [
+              "Bellevue",
+              272
+            ],
+            [
+              "Sammamish",
+              144
+            ],
+            [
+              "Kirkland",
+              142
+            ],
+            [
+              "Redmond",
+              103
+            ],
+            [
+              "Vancouver",
+              89
+            ],
+            [
+              "Bothell",
+              70
+            ],
+            [
+              "Renton",
+              67
+            ],
+            [
+              "Issaquah",
+              45
+            ],
+            [
+              "Shoreline",
+              42
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "BMW",
+            "model": "X5",
+            "year": "2022",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "30",
+            "county": "King",
+            "city": "Auburn"
+          },
+          {
+            "make": "BMW",
+            "model": "I3",
+            "year": "2019",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "126",
+            "county": "Kitsap",
+            "city": "Bainbridge Island"
+          },
+          {
+            "make": "BMW",
+            "model": "I3",
+            "year": "2014",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "72",
+            "county": "King",
+            "city": "Renton"
+          },
+          {
+            "make": "BMW",
+            "model": "I8",
+            "year": "2017",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "14",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "BMW",
+            "model": "X5",
+            "year": "2017",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "14",
+            "county": "King",
+            "city": "Seattle"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "type": "EV Type",
+        "description": "Battery Electric Vehicles (BEV) only",
+        "criteria": "Electric Vehicle Type = BEV",
+        "analysis": {
+          "totalVehicles": 39461,
+          "totalBEV": 39461,
+          "totalPHEV": 0,
+          "avgRange": 196.35,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "King",
+            "Snohomish",
+            "Kitsap",
+            "Yakima",
+            "Thurston",
+            "Island",
+            "Chelan",
+            "Skagit",
+            "Walla Walla",
+            "Grant",
+            "Stevens",
+            "Spokane",
+            "Kittitas",
+            "Whitman",
+            "Clark",
+            "Cowlitz",
+            "Jefferson",
+            "Klickitat",
+            "Clallam"
+          ],
+          "cities": [
+            "Seattle",
+            "Bothell",
+            "Issaquah",
+            "Suquamish",
+            "Yakima",
+            "Port Orchard",
+            "Lynnwood",
+            "Olympia",
+            "Tenino",
+            "Lacey",
+            "Brier",
+            "Shoreline",
+            "Rochester",
+            "Coupeville",
+            "Renton",
+            "Marysville",
+            "Pacific",
+            "Bainbridge Island",
+            "Everett",
+            "Edmonds",
+            "Wenatchee",
+            "Kingston",
+            "Mukilteo",
+            "Bremerton",
+            "Snohomish",
+            "Oak Harbor",
+            "Anacortes",
+            "Walla Walla",
+            "Mill Creek",
+            "Moses Lake",
+            "Monroe",
+            "Moxee",
+            "Olalla",
+            "Chewelah",
+            "Freeland",
+            "Spokane",
+            "Ellensburg",
+            "Naches",
+            "Quincy",
+            "Pullman",
+            "Clinton",
+            "Burien",
+            "Cashmere",
+            "Poulsbo",
+            "Langley",
+            "Chelan",
+            "Ravensdale",
+            "Cle Elum",
+            "Redmond",
+            "Mount Vernon",
+            "Kent",
+            "Vancouver",
+            "Bellevue",
+            "Kirkland",
+            "Federal Way",
+            "Seabeck",
+            "North Bend",
+            "Woodinville",
+            "Sammamish",
+            "Brush Prairie",
+            "Castle Rock",
+            "Tukwila",
+            "Camas",
+            "Silverdale",
+            "Auburn",
+            "Yacolt",
+            "Newcastle",
+            "Normandy Park",
+            "Medina",
+            "Duvall",
+            "Kelso",
+            "Clyde Hill",
+            "Rainier",
+            "Lake Stevens",
+            "Lake Forest Park",
+            "Arlington",
+            "Port Hadlock",
+            "Port Townsend",
+            "Kenmore",
+            "Washougal",
+            "Des Moines",
+            "Kalama",
+            "Battle Ground",
+            "Camano Island",
+            "Woodway",
+            "Sequim",
+            "Ridgefield",
+            "Beaux Arts",
+            "Selah",
+            "Port Ludlow",
+            "Woodland",
+            "Algona",
+            "Brinnon",
+            "Maple Valley",
+            "La Center",
+            "Yelm",
+            "Tumwater",
+            "Nine Mile Falls",
+            "Zillah",
+            "Sultan",
+            "Covington",
+            "Colville",
+            "Seatac",
+            "Mountlake Terrace",
+            "Longview",
+            "Mercer Island",
+            "Toppenish",
+            "Bucoda",
+            "Enumclaw",
+            "Silverlake",
+            "Indianola",
+            "Skykomish",
+            "Quilcene",
+            "Grandview",
+            "Granger",
+            "Sunnyside",
+            "Granite Falls",
+            "Mabton",
+            "Stanwood",
+            "White Salmon",
+            "Port Angeles",
+            "Forks",
+            "Black Diamond",
+            "Darrington",
+            "Nordland",
+            "Ariel",
+            "Tieton",
+            "Bingen",
+            "Tulalip",
+            "Snoqualmie",
+            "Carnation",
+            "Keyport",
+            "Amboy",
+            "Centralia",
+            "Union Gap",
+            "Gold Bar",
+            "Chimacum",
+            "Hunts Point",
+            "Yarrow Point",
+            "Outlook",
+            "Gig Harbor",
+            "Milton",
+            "Hansville",
+            "Goldendale",
+            "Index",
+            "Toutle"
+          ],
+          "makes": [
+            "TESLA",
+            "NISSAN",
+            "CHEVROLET",
+            "AUDI",
+            "KIA",
+            "SMART",
+            "VOLKSWAGEN",
+            "RIVIAN",
+            "TOYOTA",
+            "HYUNDAI",
+            "FIAT",
+            "FORD",
+            "VOLVO",
+            "MERCEDES-BENZ",
+            "SUBARU",
+            "BMW",
+            "JAGUAR",
+            "POLESTAR",
+            "PORSCHE",
+            "MINI",
+            "LUCID",
+            "MITSUBISHI",
+            "CADILLAC",
+            "FISKER",
+            "LEXUS",
+            "GENESIS",
+            "TH!NK",
+            "GMC",
+            "MAZDA",
+            "AZURE DYNAMICS"
+          ],
+          "models": [
+            "MODEL Y",
+            "MODEL S",
+            "LEAF",
+            "BOLT EV",
+            "MODEL 3",
+            "E-TRON",
+            "SOUL EV",
+            "EV9",
+            "FORTWO",
+            "NIRO",
+            "E-GOLF",
+            "R1T",
+            "RAV4",
+            "KONA",
+            "SOUL",
+            "MODEL X",
+            "500",
+            "IONIQ",
+            "R1S",
+            "F-150",
+            "SPARK",
+            "EQ FORTWO",
+            "MUSTANG MACH-E",
+            "ID.4",
+            "EDV",
+            "XC40",
+            "EQS-CLASS SUV",
+            "SOLTERRA",
+            "EV6",
+            "I4",
+            "BOLT EUV",
+            "Q4",
+            "KONA ELECTRIC",
+            "I-PACE",
+            "PS2",
+            "IONIQ 5",
+            "TAYCAN",
+            "HARDTOP",
+            "AIR",
+            "I-MIEV",
+            "IONIQ 6",
+            "BZ4X",
+            "EQS-CLASS SEDAN",
+            "C40",
+            "E-TRON SPORTBACK",
+            "LYRIQ",
+            "I5",
+            "ARIYA",
+            "EQE-CLASS SUV",
+            "IX",
+            "RS E-TRON GT",
+            "OCEAN",
+            "I3",
+            "FOCUS",
+            "EQB-CLASS",
+            "TRANSIT",
+            "E-TRON GT",
+            "B-CLASS",
+            "BLAZER EV",
+            "Q8",
+            "RZ 450E",
+            "GV60",
+            "CITY",
+            "EQE-CLASS SEDAN",
+            "SILVERADO EV",
+            "FORTWO ELECTRIC DRIVE",
+            "HUMMER EV PICKUP",
+            "GV70",
+            "RANGER",
+            "ROADSTER",
+            "I7",
+            "G80",
+            "MX-30",
+            "TRANSIT CONNECT ELECTRIC"
+          ],
+          "topMakes": [
+            [
+              "TESLA",
+              23127
+            ],
+            [
+              "NISSAN",
+              3909
+            ],
+            [
+              "CHEVROLET",
+              2458
+            ],
+            [
+              "KIA",
+              1397
+            ],
+            [
+              "VOLKSWAGEN",
+              1328
+            ],
+            [
+              "FORD",
+              1224
+            ],
+            [
+              "RIVIAN",
+              1136
+            ],
+            [
+              "HYUNDAI",
+              1060
+            ],
+            [
+              "BMW",
+              732
+            ],
+            [
+              "AUDI",
+              595
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 39461,
+              "percentage": 100
+            },
+            "PHEV": {
+              "count": 0,
+              "percentage": 0
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2024",
+              928
+            ],
+            [
+              "2023",
+              14273
+            ],
+            [
+              "2022",
+              6722
+            ],
+            [
+              "2021",
+              4246
+            ],
+            [
+              "2020",
+              2839
+            ],
+            [
+              "2019",
+              2549
+            ],
+            [
+              "2018",
+              2950
+            ],
+            [
+              "2017",
+              1270
+            ],
+            [
+              "2016",
+              1053
+            ],
+            [
+              "2015",
+              965
+            ]
+          ],
+          "topCounties": [
+            [
+              "King",
+              29961
+            ],
+            [
+              "Clark",
+              3588
+            ],
+            [
+              "Snohomish",
+              2205
+            ],
+            [
+              "Kitsap",
+              1572
+            ],
+            [
+              "Thurston",
+              1139
+            ],
+            [
+              "Cowlitz",
+              308
+            ],
+            [
+              "Jefferson",
+              273
+            ],
+            [
+              "Yakima",
+              212
+            ],
+            [
+              "Island",
+              109
+            ],
+            [
+              "Clallam",
+              38
+            ]
+          ],
+          "topCities": [
+            [
+              "Seattle",
+              8274
+            ],
+            [
+              "Bellevue",
+              3914
+            ],
+            [
+              "Kirkland",
+              2328
+            ],
+            [
+              "Sammamish",
+              2268
+            ],
+            [
+              "Vancouver",
+              2241
+            ],
+            [
+              "Redmond",
+              1832
+            ],
+            [
+              "Bothell",
+              1504
+            ],
+            [
+              "Renton",
+              1192
+            ],
+            [
+              "Shoreline",
+              1130
+            ],
+            [
+              "Kent",
+              1074
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "291",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2023",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "0",
+            "county": "Snohomish",
+            "city": "Bothell"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL S",
+            "year": "2019",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "270",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL S",
+            "year": "2016",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "210",
+            "county": "King",
+            "city": "Issaquah"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2021",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "0",
+            "county": "Kitsap",
+            "city": "Suquamish"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "type": "EV Type",
+        "description": "Plug-in Hybrid Electric Vehicles (PHEV) only",
+        "criteria": "Electric Vehicle Type = PHEV",
+        "analysis": {
+          "totalVehicles": 10539,
+          "totalBEV": 0,
+          "totalPHEV": 10539,
+          "avgRange": 30.62,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "Thurston",
+            "Snohomish",
+            "King",
+            "Kitsap",
+            "Yakima",
+            "Skagit",
+            "Spokane",
+            "Grant",
+            "Whitman",
+            "Kittitas",
+            "Stevens",
+            "Chelan",
+            "Island",
+            "Pend Oreille",
+            "Walla Walla",
+            "Clark",
+            "Cowlitz",
+            "Jefferson",
+            "Clallam",
+            "Klickitat"
+          ],
+          "cities": [
+            "Yelm",
+            "Bothell",
+            "Auburn",
+            "Bainbridge Island",
+            "Lynnwood",
+            "Renton",
+            "Yakima",
+            "Seattle",
+            "Olympia",
+            "Tenino",
+            "Edmonds",
+            "Anacortes",
+            "Spokane",
+            "Snohomish",
+            "Ephrata",
+            "Pullman",
+            "Ellensburg",
+            "Bremerton",
+            "Moses Lake",
+            "Kettle Falls",
+            "Chelan",
+            "Oak Harbor",
+            "Vashon",
+            "Everett",
+            "Marysville",
+            "Newport",
+            "Walla Walla",
+            "Poulsbo",
+            "Tukwila",
+            "Bellevue",
+            "Shoreline",
+            "Kirkland",
+            "Vancouver",
+            "Duvall",
+            "La Center",
+            "Rainier",
+            "Redmond",
+            "Seatac",
+            "Camas",
+            "Kenmore",
+            "Lake Stevens",
+            "Longview",
+            "Kelso",
+            "Silverdale",
+            "Newcastle",
+            "Kent",
+            "Port Townsend",
+            "Colville",
+            "Ariel",
+            "Port Ludlow",
+            "Washougal",
+            "Federal Way",
+            "Sammamish",
+            "Arlington",
+            "Issaquah",
+            "Burien",
+            "Port Orchard",
+            "Mill Creek",
+            "Seabeck",
+            "Battle Ground",
+            "Brush Prairie",
+            "Lake Forest Park",
+            "Kingston",
+            "Woodinville",
+            "Beaux Arts",
+            "Woodland",
+            "Kalama",
+            "Monroe",
+            "Enumclaw",
+            "Mercer Island",
+            "Sunnyside",
+            "Nine Mile Falls",
+            "Grandview",
+            "Ridgefield",
+            "Tumwater",
+            "Olalla",
+            "Nordland",
+            "Selah",
+            "Port Angeles",
+            "Castle Rock",
+            "Des Moines",
+            "Rochester",
+            "North Bend",
+            "Goldendale",
+            "Medina",
+            "Camano Island",
+            "Clyde Hill",
+            "Silverlake",
+            "Coupeville",
+            "Mukilteo",
+            "Indianola",
+            "Pacific",
+            "Sequim",
+            "Cowiche",
+            "Port Hadlock",
+            "Normandy Park",
+            "Brinnon",
+            "Quilcene",
+            "Covington",
+            "White Salmon",
+            "Lacey",
+            "Wapato",
+            "Sultan",
+            "Naches",
+            "Algona",
+            "Yacolt",
+            "Moxee",
+            "Mountlake Terrace",
+            "Maple Valley",
+            "Suquamish",
+            "Gold Bar",
+            "Snoqualmie",
+            "Milton",
+            "Black Diamond",
+            "Amboy",
+            "Chimacum",
+            "Centralia",
+            "Toppenish",
+            "Hansville",
+            "Outlook",
+            "Stanwood",
+            "Union Gap",
+            "Granite Falls",
+            "Zillah",
+            "Yarrow Point",
+            "Hunts Point",
+            "Carnation",
+            "Freeland"
+          ],
+          "makes": [
+            "FORD",
+            "KIA",
+            "BMW",
+            "AUDI",
+            "TOYOTA",
+            "JEEP",
+            "PORSCHE",
+            "CHEVROLET",
+            "HYUNDAI",
+            "CHRYSLER",
+            "HONDA",
+            "MITSUBISHI",
+            "LEXUS",
+            "DODGE",
+            "VOLVO",
+            "MERCEDES-BENZ",
+            "LAND ROVER",
+            "ALFA ROMEO",
+            "SUBARU",
+            "MAZDA",
+            "MINI",
+            "FISKER",
+            "LINCOLN",
+            "CADILLAC",
+            "BENTLEY"
+          ],
+          "models": [
+            "FUSION",
+            "OPTIMA",
+            "X5",
+            "I3",
+            "Q5 E",
+            "C-MAX",
+            "NIRO",
+            "I8",
+            "SORENTO",
+            "PRIUS PRIME",
+            "WRANGLER",
+            "X3",
+            "RAV4 PRIME",
+            "ESCAPE",
+            "CAYENNE",
+            "VOLT",
+            "SANTA FE",
+            "330E",
+            "TUCSON",
+            "PACIFICA",
+            "CLARITY",
+            "A3",
+            "OUTLANDER",
+            "NX",
+            "HORNET",
+            "SPORTAGE",
+            "XC60",
+            "PRIUS PLUG-IN",
+            "GLE-CLASS",
+            "XC90",
+            "GRAND CHEROKEE",
+            "GLC-CLASS",
+            "RANGE ROVER SPORT",
+            "PRIUS",
+            "TONALE",
+            "530E",
+            "CROSSTREK",
+            "745E",
+            "Q5",
+            "ACCORD",
+            "V60",
+            "CX-90",
+            "S60",
+            "COUNTRYMAN",
+            "KARMA",
+            "AVIATOR",
+            "IONIQ",
+            "ELR",
+            "PANAMERA",
+            "740E",
+            "CORSAIR",
+            "RANGE ROVER",
+            "C-CLASS",
+            "S90",
+            "SONATA",
+            "A7",
+            "FLYING SPUR",
+            "A8 E",
+            "XM",
+            "S-CLASS",
+            "CT6"
+          ],
+          "topMakes": [
+            [
+              "BMW",
+              1482
+            ],
+            [
+              "TOYOTA",
+              1482
+            ],
+            [
+              "JEEP",
+              1399
+            ],
+            [
+              "CHEVROLET",
+              1085
+            ],
+            [
+              "CHRYSLER",
+              908
+            ],
+            [
+              "FORD",
+              804
+            ],
+            [
+              "VOLVO",
+              800
+            ],
+            [
+              "KIA",
+              583
+            ],
+            [
+              "AUDI",
+              435
+            ],
+            [
+              "DODGE",
+              412
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 0,
+              "percentage": 0
+            },
+            "PHEV": {
+              "count": 10539,
+              "percentage": 100
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2024",
+              1158
+            ],
+            [
+              "2023",
+              2518
+            ],
+            [
+              "2022",
+              1091
+            ],
+            [
+              "2021",
+              981
+            ],
+            [
+              "2020",
+              451
+            ],
+            [
+              "2019",
+              480
+            ],
+            [
+              "2018",
+              1142
+            ],
+            [
+              "2017",
+              1005
+            ],
+            [
+              "2016",
+              415
+            ],
+            [
+              "2015",
+              301
+            ]
+          ],
+          "topCounties": [
+            [
+              "King",
+              7541
+            ],
+            [
+              "Clark",
+              1250
+            ],
+            [
+              "Kitsap",
+              582
+            ],
+            [
+              "Thurston",
+              385
+            ],
+            [
+              "Snohomish",
+              348
+            ],
+            [
+              "Cowlitz",
+              132
+            ],
+            [
+              "Jefferson",
+              120
+            ],
+            [
+              "Yakima",
+              94
+            ],
+            [
+              "Island",
+              43
+            ],
+            [
+              "Clallam",
+              15
+            ]
+          ],
+          "topCities": [
+            [
+              "Seattle",
+              2153
+            ],
+            [
+              "Tukwila",
+              1545
+            ],
+            [
+              "Vancouver",
+              767
+            ],
+            [
+              "Bellevue",
+              659
+            ],
+            [
+              "Kirkland",
+              423
+            ],
+            [
+              "Sammamish",
+              331
+            ],
+            [
+              "Redmond",
+              272
+            ],
+            [
+              "Shoreline",
+              261
+            ],
+            [
+              "Renton",
+              245
+            ],
+            [
+              "Bothell",
+              240
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "FORD",
+            "model": "FUSION",
+            "year": "2017",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "21",
+            "county": "Thurston",
+            "city": "Yelm"
+          },
+          {
+            "make": "KIA",
+            "model": "OPTIMA",
+            "year": "2018",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "29",
+            "county": "Snohomish",
+            "city": "Bothell"
+          },
+          {
+            "make": "BMW",
+            "model": "X5",
+            "year": "2022",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "30",
+            "county": "King",
+            "city": "Auburn"
+          },
+          {
+            "make": "BMW",
+            "model": "I3",
+            "year": "2019",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "126",
+            "county": "Kitsap",
+            "city": "Bainbridge Island"
+          },
+          {
+            "make": "AUDI",
+            "model": "Q5 E",
+            "year": "2021",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "18",
+            "county": "Snohomish",
+            "city": "Lynnwood"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "type": "County",
+        "description": "Vehicles registered in King County",
+        "criteria": "County = King",
+        "analysis": {
+          "totalVehicles": 37502,
+          "totalBEV": 29961,
+          "totalPHEV": 7541,
+          "avgRange": 125.69,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "King"
+          ],
+          "cities": [
+            "Seattle",
+            "Issaquah",
+            "Auburn",
+            "Renton",
+            "Shoreline",
+            "Pacific",
+            "Burien",
+            "Vashon",
+            "Ravensdale",
+            "Redmond",
+            "Kent",
+            "Bellevue",
+            "Kirkland",
+            "Tukwila",
+            "Federal Way",
+            "Bothell",
+            "North Bend",
+            "Duvall",
+            "Woodinville",
+            "Sammamish",
+            "Newcastle",
+            "Normandy Park",
+            "Seatac",
+            "Medina",
+            "Kenmore",
+            "Clyde Hill",
+            "Lake Forest Park",
+            "Des Moines",
+            "Beaux Arts",
+            "Algona",
+            "Maple Valley",
+            "Enumclaw",
+            "Mercer Island",
+            "Covington",
+            "Skykomish",
+            "Black Diamond",
+            "Snoqualmie",
+            "Carnation",
+            "Milton",
+            "Hunts Point",
+            "Yarrow Point"
+          ],
+          "makes": [
+            "TESLA",
+            "BMW",
+            "NISSAN",
+            "KIA",
+            "AUDI",
+            "TOYOTA",
+            "FORD",
+            "RIVIAN",
+            "VOLVO",
+            "DODGE",
+            "CHEVROLET",
+            "MITSUBISHI",
+            "JEEP",
+            "PORSCHE",
+            "MERCEDES-BENZ",
+            "VOLKSWAGEN",
+            "CHRYSLER",
+            "HYUNDAI",
+            "POLESTAR",
+            "MINI",
+            "LUCID",
+            "LAND ROVER",
+            "SUBARU",
+            "SMART",
+            "FIAT",
+            "ALFA ROMEO",
+            "HONDA",
+            "FISKER",
+            "JAGUAR",
+            "LEXUS",
+            "LINCOLN",
+            "MAZDA",
+            "GENESIS",
+            "CADILLAC",
+            "GMC",
+            "BENTLEY",
+            "AZURE DYNAMICS"
+          ],
+          "models": [
+            "MODEL Y",
+            "MODEL S",
+            "X5",
+            "LEAF",
+            "MODEL 3",
+            "I3",
+            "NIRO",
+            "E-TRON",
+            "I8",
+            "RAV4",
+            "MODEL X",
+            "MUSTANG MACH-E",
+            "EDV",
+            "XC40",
+            "HORNET",
+            "BOLT EV",
+            "SPORTAGE",
+            "OUTLANDER",
+            "XC60",
+            "WRANGLER",
+            "CAYENNE",
+            "EQS-CLASS SUV",
+            "PRIUS PLUG-IN",
+            "SORENTO",
+            "RAV4 PRIME",
+            "C-MAX",
+            "R1S",
+            "PRIUS PRIME",
+            "EV6",
+            "I4",
+            "BOLT EUV",
+            "ID.4",
+            "PACIFICA",
+            "XC90",
+            "330E",
+            "SOUL",
+            "KONA ELECTRIC",
+            "R1T",
+            "VOLT",
+            "IONIQ 5",
+            "TAYCAN",
+            "PS2",
+            "HARDTOP",
+            "GRAND CHEROKEE",
+            "AIR",
+            "GLC-CLASS",
+            "I-MIEV",
+            "KONA",
+            "TUCSON",
+            "RANGE ROVER SPORT",
+            "FUSION",
+            "SOLTERRA",
+            "FORTWO",
+            "SPARK",
+            "IONIQ 6",
+            "500",
+            "F-150",
+            "Q4",
+            "EV9",
+            "BZ4X",
+            "EQS-CLASS SEDAN",
+            "C40",
+            "E-GOLF",
+            "E-TRON SPORTBACK",
+            "TONALE",
+            "CLARITY",
+            "I5",
+            "530E",
+            "ARIYA",
+            "EQE-CLASS SUV",
+            "Q5 E",
+            "IX",
+            "OPTIMA",
+            "A3",
+            "RS E-TRON GT",
+            "OCEAN",
+            "Q5",
+            "ESCAPE",
+            "FOCUS",
+            "ACCORD",
+            "EQ FORTWO",
+            "V60",
+            "PRIUS",
+            "TRANSIT",
+            "I-PACE",
+            "E-TRON GT",
+            "B-CLASS",
+            "X3",
+            "COUNTRYMAN",
+            "KARMA",
+            "BLAZER EV",
+            "SOUL EV",
+            "Q8",
+            "GLE-CLASS",
+            "RZ 450E",
+            "AVIATOR",
+            "CX-90",
+            "NX",
+            "IONIQ",
+            "GV60",
+            "S60",
+            "ELR",
+            "LYRIQ",
+            "740E",
+            "EQB-CLASS",
+            "PANAMERA",
+            "EQE-CLASS SEDAN",
+            "SANTA FE",
+            "FORTWO ELECTRIC DRIVE",
+            "RANGE ROVER",
+            "GV70",
+            "RANGER",
+            "HUMMER EV PICKUP",
+            "I7",
+            "ROADSTER",
+            "G80",
+            "C-CLASS",
+            "S90",
+            "SONATA",
+            "CORSAIR",
+            "A7",
+            "FLYING SPUR",
+            "A8 E",
+            "CROSSTREK",
+            "XM",
+            "MX-30",
+            "S-CLASS",
+            "TRANSIT CONNECT ELECTRIC",
+            "CT6",
+            "745E"
+          ],
+          "topMakes": [
+            [
+              "TESLA",
+              17838
+            ],
+            [
+              "NISSAN",
+              2842
+            ],
+            [
+              "CHEVROLET",
+              2381
+            ],
+            [
+              "BMW",
+              1767
+            ],
+            [
+              "KIA",
+              1399
+            ],
+            [
+              "FORD",
+              1283
+            ],
+            [
+              "JEEP",
+              1098
+            ],
+            [
+              "VOLKSWAGEN",
+              985
+            ],
+            [
+              "TOYOTA",
+              934
+            ],
+            [
+              "VOLVO",
+              931
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 29961,
+              "percentage": 79.89
+            },
+            "PHEV": {
+              "count": 7541,
+              "percentage": 20.11
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2024",
+              1677
+            ],
+            [
+              "2023",
+              12947
+            ],
+            [
+              "2022",
+              5939
+            ],
+            [
+              "2021",
+              3844
+            ],
+            [
+              "2020",
+              2428
+            ],
+            [
+              "2019",
+              2231
+            ],
+            [
+              "2018",
+              3065
+            ],
+            [
+              "2017",
+              1597
+            ],
+            [
+              "2016",
+              1062
+            ],
+            [
+              "2015",
+              908
+            ]
+          ],
+          "topCounties": [
+            [
+              "King",
+              37502
+            ]
+          ],
+          "topCities": [
+            [
+              "Seattle",
+              10427
+            ],
+            [
+              "Bellevue",
+              4573
+            ],
+            [
+              "Kirkland",
+              2751
+            ],
+            [
+              "Sammamish",
+              2599
+            ],
+            [
+              "Tukwila",
+              2205
+            ],
+            [
+              "Redmond",
+              2104
+            ],
+            [
+              "Renton",
+              1437
+            ],
+            [
+              "Shoreline",
+              1391
+            ],
+            [
+              "Kent",
+              1289
+            ],
+            [
+              "Seatac",
+              1044
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "291",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL S",
+            "year": "2019",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "270",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL S",
+            "year": "2016",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "210",
+            "county": "King",
+            "city": "Issaquah"
+          },
+          {
+            "make": "BMW",
+            "model": "X5",
+            "year": "2022",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "30",
+            "county": "King",
+            "city": "Auburn"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "291",
+            "county": "King",
+            "city": "Seattle"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "type": "County",
+        "description": "Vehicles registered in Snohomish County",
+        "criteria": "County = Snohomish",
+        "analysis": {
+          "totalVehicles": 2553,
+          "totalBEV": 2205,
+          "totalPHEV": 348,
+          "avgRange": 144.12,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "Snohomish"
+          ],
+          "cities": [
+            "Bothell",
+            "Lynnwood",
+            "Brier",
+            "Marysville",
+            "Everett",
+            "Edmonds",
+            "Mukilteo",
+            "Snohomish",
+            "Mill Creek",
+            "Monroe",
+            "Lake Stevens",
+            "Arlington",
+            "Woodway",
+            "Sultan",
+            "Mountlake Terrace",
+            "Granite Falls",
+            "Stanwood",
+            "Darrington",
+            "Tulalip",
+            "Gold Bar",
+            "Woodinville",
+            "Index"
+          ],
+          "makes": [
+            "TESLA",
+            "KIA",
+            "AUDI",
+            "NISSAN",
+            "RIVIAN",
+            "BMW",
+            "HYUNDAI",
+            "FIAT",
+            "JEEP",
+            "SMART",
+            "VOLKSWAGEN",
+            "CHEVROLET",
+            "FORD",
+            "CHRYSLER",
+            "SUBARU",
+            "MITSUBISHI",
+            "TOYOTA",
+            "MERCEDES-BENZ",
+            "MAZDA",
+            "LEXUS",
+            "PORSCHE",
+            "POLESTAR",
+            "VOLVO",
+            "MINI",
+            "LINCOLN",
+            "GMC",
+            "CADILLAC",
+            "LUCID",
+            "HONDA",
+            "GENESIS",
+            "ALFA ROMEO",
+            "JAGUAR"
+          ],
+          "models": [
+            "MODEL Y",
+            "OPTIMA",
+            "Q5 E",
+            "LEAF",
+            "EV9",
+            "MODEL 3",
+            "R1T",
+            "X5",
+            "KONA",
+            "NIRO",
+            "SOUL",
+            "500",
+            "WRANGLER",
+            "MODEL S",
+            "FORTWO",
+            "E-GOLF",
+            "BOLT EV",
+            "MODEL X",
+            "330E",
+            "F-150",
+            "SPARK",
+            "TUCSON",
+            "SORENTO",
+            "I8",
+            "PACIFICA",
+            "SOLTERRA",
+            "ESCAPE",
+            "OUTLANDER",
+            "R1S",
+            "RAV4 PRIME",
+            "C-MAX",
+            "VOLT",
+            "ID.4",
+            "EV6",
+            "745E",
+            "EQE-CLASS SUV",
+            "MUSTANG MACH-E",
+            "IONIQ 5",
+            "CX-90",
+            "I4",
+            "E-TRON",
+            "PRIUS PLUG-IN",
+            "ARIYA",
+            "BOLT EUV",
+            "FUSION",
+            "NX",
+            "GRAND CHEROKEE",
+            "BZ4X",
+            "PANAMERA",
+            "X3",
+            "I3",
+            "PS2",
+            "Q5",
+            "XC90",
+            "EQB-CLASS",
+            "PRIUS PRIME",
+            "HARDTOP",
+            "IX",
+            "KONA ELECTRIC",
+            "CORSAIR",
+            "HUMMER EV PICKUP",
+            "Q4",
+            "LYRIQ",
+            "TAYCAN",
+            "RZ 450E",
+            "XC60",
+            "A3",
+            "XC40",
+            "S60",
+            "AVIATOR",
+            "SPORTAGE",
+            "CAYENNE",
+            "IONIQ 6",
+            "ELR",
+            "AIR",
+            "CLARITY",
+            "530E",
+            "FOCUS",
+            "C-CLASS",
+            "C40",
+            "COUNTRYMAN",
+            "TRANSIT",
+            "EQS-CLASS SUV",
+            "SANTA FE",
+            "E-TRON SPORTBACK",
+            "Q8",
+            "B-CLASS",
+            "EQE-CLASS SEDAN",
+            "GLC-CLASS",
+            "GV60",
+            "I5",
+            "TONALE",
+            "SOUL EV",
+            "PRIUS",
+            "I-PACE",
+            "740E"
+          ],
+          "topMakes": [
+            [
+              "TESLA",
+              1585
+            ],
+            [
+              "NISSAN",
+              133
+            ],
+            [
+              "BMW",
+              104
+            ],
+            [
+              "CHEVROLET",
+              98
+            ],
+            [
+              "FORD",
+              94
+            ],
+            [
+              "KIA",
+              78
+            ],
+            [
+              "RIVIAN",
+              61
+            ],
+            [
+              "TOYOTA",
+              48
+            ],
+            [
+              "HYUNDAI",
+              46
+            ],
+            [
+              "JEEP",
+              41
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 2205,
+              "percentage": 86.37
+            },
+            "PHEV": {
+              "count": 348,
+              "percentage": 13.63
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2024",
+              96
+            ],
+            [
+              "2023",
+              1041
+            ],
+            [
+              "2022",
+              410
+            ],
+            [
+              "2021",
+              264
+            ],
+            [
+              "2020",
+              165
+            ],
+            [
+              "2019",
+              135
+            ],
+            [
+              "2018",
+              185
+            ],
+            [
+              "2017",
+              78
+            ],
+            [
+              "2016",
+              50
+            ],
+            [
+              "2015",
+              38
+            ]
+          ],
+          "topCounties": [
+            [
+              "Snohomish",
+              2553
+            ]
+          ],
+          "topCities": [
+            [
+              "Bothell",
+              1080
+            ],
+            [
+              "Lynnwood",
+              298
+            ],
+            [
+              "Lake Stevens",
+              214
+            ],
+            [
+              "Everett",
+              204
+            ],
+            [
+              "Snohomish",
+              193
+            ],
+            [
+              "Monroe",
+              94
+            ],
+            [
+              "Mill Creek",
+              93
+            ],
+            [
+              "Edmonds",
+              79
+            ],
+            [
+              "Mukilteo",
+              72
+            ],
+            [
+              "Arlington",
+              67
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2023",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "0",
+            "county": "Snohomish",
+            "city": "Bothell"
+          },
+          {
+            "make": "KIA",
+            "model": "OPTIMA",
+            "year": "2018",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "29",
+            "county": "Snohomish",
+            "city": "Bothell"
+          },
+          {
+            "make": "AUDI",
+            "model": "Q5 E",
+            "year": "2021",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "18",
+            "county": "Snohomish",
+            "city": "Lynnwood"
+          },
+          {
+            "make": "NISSAN",
+            "model": "LEAF",
+            "year": "2013",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "75",
+            "county": "Snohomish",
+            "city": "Lynnwood"
+          },
+          {
+            "make": "NISSAN",
+            "model": "LEAF",
+            "year": "2017",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "107",
+            "county": "Snohomish",
+            "city": "Bothell"
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "type": "County",
+        "description": "Vehicles registered in Clark County",
+        "criteria": "County = Clark",
+        "analysis": {
+          "totalVehicles": 4838,
+          "totalBEV": 3588,
+          "totalPHEV": 1250,
+          "avgRange": 112.59,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "Clark"
+          ],
+          "cities": [
+            "Vancouver",
+            "Brush Prairie",
+            "La Center",
+            "Camas",
+            "Yacolt",
+            "Washougal",
+            "Battle Ground",
+            "Ridgefield",
+            "Woodland",
+            "Amboy"
+          ],
+          "makes": [
+            "FORD",
+            "TESLA",
+            "KIA",
+            "PORSCHE",
+            "TOYOTA",
+            "CHEVROLET",
+            "CHRYSLER",
+            "AUDI",
+            "JAGUAR",
+            "NISSAN",
+            "POLESTAR",
+            "HONDA",
+            "HYUNDAI",
+            "JEEP",
+            "CADILLAC",
+            "BMW",
+            "VOLVO",
+            "MERCEDES-BENZ",
+            "VOLKSWAGEN",
+            "MITSUBISHI",
+            "FIAT",
+            "RIVIAN",
+            "MAZDA",
+            "TH!NK",
+            "MINI",
+            "LEXUS",
+            "LINCOLN",
+            "SMART",
+            "FISKER",
+            "SUBARU",
+            "LUCID",
+            "LAND ROVER"
+          ],
+          "models": [
+            "MUSTANG MACH-E",
+            "MODEL Y",
+            "MODEL 3",
+            "EV6",
+            "CAYENNE",
+            "FUSION",
+            "RAV4 PRIME",
+            "BOLT EV",
+            "MODEL X",
+            "PACIFICA",
+            "Q4",
+            "I-PACE",
+            "LEAF",
+            "PS2",
+            "MODEL S",
+            "CLARITY",
+            "PRIUS",
+            "BOLT EUV",
+            "F-150",
+            "KONA",
+            "WRANGLER",
+            "Q5 E",
+            "LYRIQ",
+            "PRIUS PRIME",
+            "IONIQ 6",
+            "530E",
+            "PRIUS PLUG-IN",
+            "SPORTAGE",
+            "XC60",
+            "C40",
+            "VOLT",
+            "XC40",
+            "EQB-CLASS",
+            "ID.4",
+            "IONIQ 5",
+            "NIRO",
+            "ARIYA",
+            "KONA ELECTRIC",
+            "OUTLANDER",
+            "E-GOLF",
+            "BZ4X",
+            "SOUL",
+            "S60",
+            "X3",
+            "SANTA FE",
+            "ESCAPE",
+            "I3",
+            "BLAZER EV",
+            "X5",
+            "500",
+            "330E",
+            "R1T",
+            "XC90",
+            "C-MAX",
+            "Q5",
+            "SORENTO",
+            "IX",
+            "CX-90",
+            "E-TRON",
+            "CITY",
+            "Q8",
+            "HARDTOP",
+            "SOUL EV",
+            "I4",
+            "NX",
+            "SPARK",
+            "EQE-CLASS SUV",
+            "R1S",
+            "EQS-CLASS SUV",
+            "IONIQ",
+            "TAYCAN",
+            "A3",
+            "B-CLASS",
+            "CORSAIR",
+            "OPTIMA",
+            "V60",
+            "FORTWO",
+            "TUCSON",
+            "FORTWO ELECTRIC DRIVE",
+            "EQS-CLASS SEDAN",
+            "745E",
+            "GLC-CLASS",
+            "GRAND CHEROKEE",
+            "OCEAN",
+            "SOLTERRA",
+            "TRANSIT",
+            "PANAMERA",
+            "S90",
+            "FOCUS",
+            "AIR",
+            "COUNTRYMAN",
+            "AVIATOR",
+            "I8",
+            "EV9",
+            "ROADSTER",
+            "EQ FORTWO",
+            "E-TRON SPORTBACK",
+            "E-TRON GT",
+            "SONATA",
+            "GLE-CLASS",
+            "ELR",
+            "RZ 450E",
+            "S-CLASS",
+            "C-CLASS",
+            "CROSSTREK",
+            "RANGE ROVER SPORT",
+            "RANGE ROVER"
+          ],
+          "topMakes": [
+            [
+              "TESLA",
+              2000
+            ],
+            [
+              "CHEVROLET",
+              446
+            ],
+            [
+              "NISSAN",
+              405
+            ],
+            [
+              "TOYOTA",
+              336
+            ],
+            [
+              "FORD",
+              291
+            ],
+            [
+              "KIA",
+              201
+            ],
+            [
+              "BMW",
+              170
+            ],
+            [
+              "HYUNDAI",
+              147
+            ],
+            [
+              "JEEP",
+              139
+            ],
+            [
+              "VOLKSWAGEN",
+              115
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 3588,
+              "percentage": 74.16
+            },
+            "PHEV": {
+              "count": 1250,
+              "percentage": 25.84
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2024",
+              153
+            ],
+            [
+              "2023",
+              1508
+            ],
+            [
+              "2022",
+              722
+            ],
+            [
+              "2021",
+              541
+            ],
+            [
+              "2020",
+              314
+            ],
+            [
+              "2019",
+              313
+            ],
+            [
+              "2018",
+              381
+            ],
+            [
+              "2017",
+              284
+            ],
+            [
+              "2016",
+              145
+            ],
+            [
+              "2015",
+              143
+            ]
+          ],
+          "topCounties": [
+            [
+              "Clark",
+              4838
+            ]
+          ],
+          "topCities": [
+            [
+              "Vancouver",
+              3008
+            ],
+            [
+              "Camas",
+              666
+            ],
+            [
+              "Ridgefield",
+              331
+            ],
+            [
+              "Battle Ground",
+              328
+            ],
+            [
+              "Brush Prairie",
+              200
+            ],
+            [
+              "Washougal",
+              190
+            ],
+            [
+              "La Center",
+              73
+            ],
+            [
+              "Yacolt",
+              21
+            ],
+            [
+              "Woodland",
+              11
+            ],
+            [
+              "Amboy",
+              10
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "FORD",
+            "model": "MUSTANG MACH-E",
+            "year": "2021",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "0",
+            "county": "Clark",
+            "city": "Vancouver"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2023",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "0",
+            "county": "Clark",
+            "city": "Vancouver"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2022",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "0",
+            "county": "Clark",
+            "city": "Vancouver"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2023",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "0",
+            "county": "Clark",
+            "city": "Vancouver"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "year": "2022",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "0",
+            "county": "Clark",
+            "city": "Vancouver"
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "type": "CAFV Eligibility",
+        "description": "Vehicles eligible for Clean Alternative Fuel Vehicle incentives",
+        "criteria": "CAFV Eligibility = Clean Alternative Fuel Vehicle Eligible",
+        "analysis": {
+          "totalVehicles": 18749,
+          "totalBEV": 13428,
+          "totalPHEV": 5321,
+          "avgRange": 152.31,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "King",
+            "Yakima",
+            "Kitsap",
+            "Snohomish",
+            "Thurston",
+            "Island",
+            "Chelan",
+            "Spokane",
+            "Skagit",
+            "Walla Walla",
+            "Grant",
+            "Stevens",
+            "Whitman",
+            "Kittitas",
+            "Clark",
+            "Cowlitz",
+            "Jefferson",
+            "Clallam",
+            "Klickitat"
+          ],
+          "cities": [
+            "Seattle",
+            "Issaquah",
+            "Yakima",
+            "Port Orchard",
+            "Auburn",
+            "Bainbridge Island",
+            "Lynnwood",
+            "Bothell",
+            "Olympia",
+            "Renton",
+            "Tenino",
+            "Shoreline",
+            "Rochester",
+            "Lacey",
+            "Coupeville",
+            "Pacific",
+            "Everett",
+            "Edmonds",
+            "Wenatchee",
+            "Kingston",
+            "Mukilteo",
+            "Bremerton",
+            "Snohomish",
+            "Spokane",
+            "Oak Harbor",
+            "Anacortes",
+            "Walla Walla",
+            "Mill Creek",
+            "Moses Lake",
+            "Monroe",
+            "Moxee",
+            "Olalla",
+            "Chewelah",
+            "Pullman",
+            "Ellensburg",
+            "Freeland",
+            "Kettle Falls",
+            "Chelan",
+            "Clinton",
+            "Burien",
+            "Cashmere",
+            "Poulsbo",
+            "Vashon",
+            "Langley",
+            "Ravensdale",
+            "Brier",
+            "Cle Elum",
+            "Redmond",
+            "Mount Vernon",
+            "Kent",
+            "Tukwila",
+            "Federal Way",
+            "Kirkland",
+            "Vancouver",
+            "Duvall",
+            "Bellevue",
+            "Sammamish",
+            "La Center",
+            "Yacolt",
+            "Medina",
+            "Newcastle",
+            "Camas",
+            "Brush Prairie",
+            "Marysville",
+            "Longview",
+            "Rainier",
+            "Kelso",
+            "Silverdale",
+            "Port Townsend",
+            "Colville",
+            "Seatac",
+            "Arlington",
+            "Seabeck",
+            "Des Moines",
+            "Lake Stevens",
+            "Lake Forest Park",
+            "Battle Ground",
+            "Kenmore",
+            "Sequim",
+            "Beaux Arts",
+            "Algona",
+            "Woodinville",
+            "Maple Valley",
+            "Yelm",
+            "Enumclaw",
+            "Washougal",
+            "Tumwater",
+            "Mercer Island",
+            "Sunnyside",
+            "Nine Mile Falls",
+            "Suquamish",
+            "Sultan",
+            "Covington",
+            "Port Ludlow",
+            "Nordland",
+            "Woodland",
+            "Port Angeles",
+            "Normandy Park",
+            "Castle Rock",
+            "Kalama",
+            "Ridgefield",
+            "Toppenish",
+            "North Bend",
+            "Grandview",
+            "Port Hadlock",
+            "Silverlake",
+            "Goldendale",
+            "Camano Island",
+            "Clyde Hill",
+            "Skykomish",
+            "Selah",
+            "Quilcene",
+            "Cowiche",
+            "Granite Falls",
+            "White Salmon",
+            "Brinnon",
+            "Naches",
+            "Wapato",
+            "Forks",
+            "Indianola",
+            "Darrington",
+            "Stanwood",
+            "Ariel",
+            "Woodway",
+            "Tulalip",
+            "Gold Bar",
+            "Keyport",
+            "Snoqualmie",
+            "Black Diamond",
+            "Carnation",
+            "Amboy",
+            "Centralia",
+            "Chimacum",
+            "Hunts Point",
+            "Hansville",
+            "Mountlake Terrace",
+            "Yarrow Point",
+            "Zillah",
+            "Mabton",
+            "Outlook",
+            "Tieton",
+            "Gig Harbor",
+            "Milton",
+            "Bingen"
+          ],
+          "makes": [
+            "TESLA",
+            "NISSAN",
+            "BMW",
+            "AUDI",
+            "KIA",
+            "SMART",
+            "VOLKSWAGEN",
+            "TOYOTA",
+            "HYUNDAI",
+            "FIAT",
+            "CHEVROLET",
+            "FORD",
+            "CHRYSLER",
+            "HONDA",
+            "LEXUS",
+            "DODGE",
+            "MERCEDES-BENZ",
+            "JAGUAR",
+            "MITSUBISHI",
+            "PORSCHE",
+            "ALFA ROMEO",
+            "MINI",
+            "VOLVO",
+            "POLESTAR",
+            "FISKER",
+            "CADILLAC",
+            "TH!NK",
+            "LAND ROVER",
+            "AZURE DYNAMICS"
+          ],
+          "models": [
+            "MODEL Y",
+            "MODEL S",
+            "LEAF",
+            "X5",
+            "I3",
+            "MODEL 3",
+            "E-TRON",
+            "SOUL EV",
+            "FORTWO",
+            "SORENTO",
+            "NIRO",
+            "E-GOLF",
+            "RAV4",
+            "KONA",
+            "SOUL",
+            "MODEL X",
+            "500",
+            "RAV4 PRIME",
+            "BOLT EV",
+            "IONIQ",
+            "ESCAPE",
+            "VOLT",
+            "SANTA FE",
+            "SPARK",
+            "TUCSON",
+            "PACIFICA",
+            "CLARITY",
+            "NX",
+            "EQ FORTWO",
+            "HORNET",
+            "SPORTAGE",
+            "GLE-CLASS",
+            "I-PACE",
+            "I-MIEV",
+            "PRIUS",
+            "TAYCAN",
+            "E-TRON SPORTBACK",
+            "OUTLANDER",
+            "TONALE",
+            "HARDTOP",
+            "XC60",
+            "FOCUS",
+            "V60",
+            "PS2",
+            "B-CLASS",
+            "KARMA",
+            "XC90",
+            "ELR",
+            "PRIUS PRIME",
+            "CITY",
+            "S60",
+            "FORTWO ELECTRIC DRIVE",
+            "RANGER",
+            "RANGE ROVER SPORT",
+            "ROADSTER",
+            "XM",
+            "TRANSIT CONNECT ELECTRIC",
+            "CT6",
+            "S90",
+            "RANGE ROVER"
+          ],
+          "topMakes": [
+            [
+              "TESLA",
+              7408
+            ],
+            [
+              "NISSAN",
+              3071
+            ],
+            [
+              "CHEVROLET",
+              2214
+            ],
+            [
+              "BMW",
+              1121
+            ],
+            [
+              "CHRYSLER",
+              908
+            ],
+            [
+              "KIA",
+              788
+            ],
+            [
+              "TOYOTA",
+              638
+            ],
+            [
+              "DODGE",
+              412
+            ],
+            [
+              "VOLVO",
+              325
+            ],
+            [
+              "VOLKSWAGEN",
+              321
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 13428,
+              "percentage": 71.62
+            },
+            "PHEV": {
+              "count": 5321,
+              "percentage": 28.38
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2024",
+              871
+            ],
+            [
+              "2023",
+              1432
+            ],
+            [
+              "2022",
+              665
+            ],
+            [
+              "2021",
+              574
+            ],
+            [
+              "2020",
+              2927
+            ],
+            [
+              "2019",
+              2652
+            ],
+            [
+              "2018",
+              3459
+            ],
+            [
+              "2017",
+              1712
+            ],
+            [
+              "2016",
+              1152
+            ],
+            [
+              "2015",
+              1116
+            ]
+          ],
+          "topCounties": [
+            [
+              "King",
+              13801
+            ],
+            [
+              "Clark",
+              1939
+            ],
+            [
+              "Kitsap",
+              942
+            ],
+            [
+              "Snohomish",
+              760
+            ],
+            [
+              "Thurston",
+              673
+            ],
+            [
+              "Jefferson",
+              200
+            ],
+            [
+              "Cowlitz",
+              183
+            ],
+            [
+              "Yakima",
+              121
+            ],
+            [
+              "Island",
+              55
+            ],
+            [
+              "Clallam",
+              24
+            ]
+          ],
+          "topCities": [
+            [
+              "Seattle",
+              4262
+            ],
+            [
+              "Bellevue",
+              1673
+            ],
+            [
+              "Vancouver",
+              1210
+            ],
+            [
+              "Kirkland",
+              1037
+            ],
+            [
+              "Tukwila",
+              905
+            ],
+            [
+              "Sammamish",
+              865
+            ],
+            [
+              "Redmond",
+              714
+            ],
+            [
+              "Shoreline",
+              586
+            ],
+            [
+              "Bothell",
+              553
+            ],
+            [
+              "Renton",
+              451
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "291",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL S",
+            "year": "2019",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "270",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL S",
+            "year": "2016",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "210",
+            "county": "King",
+            "city": "Issaquah"
+          },
+          {
+            "make": "NISSAN",
+            "model": "LEAF",
+            "year": "2013",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "75",
+            "county": "Yakima",
+            "city": "Yakima"
+          },
+          {
+            "make": "NISSAN",
+            "model": "LEAF",
+            "year": "2015",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "84",
+            "county": "Kitsap",
+            "city": "Port Orchard"
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "type": "CAFV Eligibility",
+        "description": "Vehicles not eligible due to low battery range",
+        "criteria": "CAFV Eligibility = Not eligible due to low battery range",
+        "analysis": {
+          "totalVehicles": 5220,
+          "totalBEV": 2,
+          "totalPHEV": 5218,
+          "avgRange": 19.93,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "Thurston",
+            "Snohomish",
+            "Yakima",
+            "King",
+            "Skagit",
+            "Grant",
+            "Kitsap",
+            "Pend Oreille",
+            "Walla Walla",
+            "Whitman",
+            "Clark",
+            "Cowlitz",
+            "Jefferson",
+            "Island",
+            "Stevens",
+            "Klickitat",
+            "Clallam"
+          ],
+          "cities": [
+            "Yelm",
+            "Bothell",
+            "Lynnwood",
+            "Yakima",
+            "Seattle",
+            "Olympia",
+            "Tenino",
+            "Edmonds",
+            "Anacortes",
+            "Ephrata",
+            "Bremerton",
+            "Marysville",
+            "Newport",
+            "Walla Walla",
+            "Pullman",
+            "Poulsbo",
+            "Bellevue",
+            "Tukwila",
+            "Shoreline",
+            "Vancouver",
+            "Auburn",
+            "Kirkland",
+            "Rainier",
+            "Seatac",
+            "Kenmore",
+            "Lake Stevens",
+            "Redmond",
+            "Kent",
+            "Kelso",
+            "Ariel",
+            "Port Ludlow",
+            "Washougal",
+            "Oak Harbor",
+            "Federal Way",
+            "Sammamish",
+            "Everett",
+            "Port Townsend",
+            "Issaquah",
+            "Arlington",
+            "Burien",
+            "Seabeck",
+            "Battle Ground",
+            "Bainbridge Island",
+            "Silverdale",
+            "Woodinville",
+            "Brush Prairie",
+            "Woodland",
+            "Kalama",
+            "Port Orchard",
+            "Renton",
+            "Nine Mile Falls",
+            "Sunnyside",
+            "Grandview",
+            "Camas",
+            "Ridgefield",
+            "Duvall",
+            "Selah",
+            "Kingston",
+            "Longview",
+            "North Bend",
+            "Newcastle",
+            "Snohomish",
+            "Mill Creek",
+            "Beaux Arts",
+            "Coupeville",
+            "Clyde Hill",
+            "La Center",
+            "Mukilteo",
+            "Indianola",
+            "Pacific",
+            "Lake Forest Park",
+            "Rochester",
+            "Normandy Park",
+            "White Salmon",
+            "Monroe",
+            "Lacey",
+            "Camano Island",
+            "Mercer Island",
+            "Port Hadlock",
+            "Port Angeles",
+            "Colville",
+            "Sultan",
+            "Naches",
+            "Medina",
+            "Tumwater",
+            "Olalla",
+            "Silverlake",
+            "Des Moines",
+            "Algona",
+            "Mountlake Terrace",
+            "Maple Valley",
+            "Suquamish",
+            "Covington",
+            "Milton",
+            "Snoqualmie",
+            "Black Diamond",
+            "Brinnon",
+            "Enumclaw",
+            "Castle Rock",
+            "Chimacum",
+            "Toppenish",
+            "Yacolt",
+            "Outlook",
+            "Sequim",
+            "Stanwood",
+            "Moxee",
+            "Union Gap",
+            "Granite Falls",
+            "Zillah",
+            "Amboy",
+            "Hansville",
+            "Carnation"
+          ],
+          "makes": [
+            "FORD",
+            "KIA",
+            "AUDI",
+            "BMW",
+            "TOYOTA",
+            "JEEP",
+            "PORSCHE",
+            "MITSUBISHI",
+            "VOLVO",
+            "MERCEDES-BENZ",
+            "LAND ROVER",
+            "SUBARU",
+            "HONDA",
+            "MAZDA",
+            "MINI",
+            "LINCOLN",
+            "HYUNDAI",
+            "BENTLEY"
+          ],
+          "models": [
+            "FUSION",
+            "OPTIMA",
+            "Q5 E",
+            "C-MAX",
+            "NIRO",
+            "I8",
+            "X5",
+            "PRIUS PRIME",
+            "WRANGLER",
+            "X3",
+            "CAYENNE",
+            "330E",
+            "A3",
+            "OUTLANDER",
+            "XC60",
+            "PRIUS PLUG-IN",
+            "XC90",
+            "GRAND CHEROKEE",
+            "GLC-CLASS",
+            "RANGE ROVER SPORT",
+            "530E",
+            "CROSSTREK",
+            "745E",
+            "Q5",
+            "ACCORD",
+            "CX-90",
+            "S60",
+            "COUNTRYMAN",
+            "AVIATOR",
+            "IONIQ",
+            "GLE-CLASS",
+            "PANAMERA",
+            "740E",
+            "CORSAIR",
+            "RANGE ROVER",
+            "V60",
+            "C-CLASS",
+            "S90",
+            "SONATA",
+            "A7",
+            "FLYING SPUR",
+            "A8 E",
+            "S-CLASS"
+          ],
+          "topMakes": [
+            [
+              "JEEP",
+              1399
+            ],
+            [
+              "TOYOTA",
+              862
+            ],
+            [
+              "FORD",
+              706
+            ],
+            [
+              "BMW",
+              521
+            ],
+            [
+              "VOLVO",
+              475
+            ],
+            [
+              "AUDI",
+              435
+            ],
+            [
+              "KIA",
+              216
+            ],
+            [
+              "PORSCHE",
+              132
+            ],
+            [
+              "MAZDA",
+              110
+            ],
+            [
+              "MITSUBISHI",
+              94
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 2,
+              "percentage": 0.04
+            },
+            "PHEV": {
+              "count": 5218,
+              "percentage": 99.96
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2024",
+              287
+            ],
+            [
+              "2023",
+              1086
+            ],
+            [
+              "2022",
+              426
+            ],
+            [
+              "2021",
+              562
+            ],
+            [
+              "2020",
+              349
+            ],
+            [
+              "2019",
+              374
+            ],
+            [
+              "2018",
+              633
+            ],
+            [
+              "2017",
+              563
+            ],
+            [
+              "2016",
+              316
+            ],
+            [
+              "2015",
+              150
+            ]
+          ],
+          "topCounties": [
+            [
+              "King",
+              3760
+            ],
+            [
+              "Clark",
+              602
+            ],
+            [
+              "Kitsap",
+              296
+            ],
+            [
+              "Thurston",
+              178
+            ],
+            [
+              "Snohomish",
+              175
+            ],
+            [
+              "Jefferson",
+              59
+            ],
+            [
+              "Cowlitz",
+              58
+            ],
+            [
+              "Yakima",
+              50
+            ],
+            [
+              "Island",
+              27
+            ],
+            [
+              "Clallam",
+              5
+            ]
+          ],
+          "topCities": [
+            [
+              "Seattle",
+              1145
+            ],
+            [
+              "Tukwila",
+              680
+            ],
+            [
+              "Vancouver",
+              367
+            ],
+            [
+              "Bellevue",
+              328
+            ],
+            [
+              "Kirkland",
+              208
+            ],
+            [
+              "Sammamish",
+              164
+            ],
+            [
+              "Redmond",
+              134
+            ],
+            [
+              "Renton",
+              122
+            ],
+            [
+              "Kent",
+              120
+            ],
+            [
+              "Shoreline",
+              114
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "FORD",
+            "model": "FUSION",
+            "year": "2017",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "21",
+            "county": "Thurston",
+            "city": "Yelm"
+          },
+          {
+            "make": "KIA",
+            "model": "OPTIMA",
+            "year": "2018",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "29",
+            "county": "Snohomish",
+            "city": "Bothell"
+          },
+          {
+            "make": "AUDI",
+            "model": "Q5 E",
+            "year": "2021",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "18",
+            "county": "Snohomish",
+            "city": "Lynnwood"
+          },
+          {
+            "make": "FORD",
+            "model": "C-MAX",
+            "year": "2013",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "19",
+            "county": "Yakima",
+            "city": "Yakima"
+          },
+          {
+            "make": "KIA",
+            "model": "NIRO",
+            "year": "2018",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "26",
+            "county": "King",
+            "city": "Seattle"
+          }
+        ]
+      }
+    ],
+    "grouped": [
+      {
+        "id": 1,
+        "description": "Recent Tesla BEV vehicles with high range",
+        "criteria": "Model Year >= 2020 AND Make = TESLA AND Electric Range > 250",
+        "filterTypes": [
+          "Model Year",
+          "Make",
+          "Electric Range"
+        ],
+        "analysis": {
+          "totalVehicles": 2058,
+          "totalBEV": 2058,
+          "totalPHEV": 0,
+          "avgRange": 295.44,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "King",
+            "Thurston",
+            "Yakima",
+            "Snohomish",
+            "Grant",
+            "Clark",
+            "Kitsap",
+            "Jefferson",
+            "Cowlitz",
+            "Stevens",
+            "Clallam",
+            "Island",
+            "Klickitat"
+          ],
+          "cities": [
+            "Seattle",
+            "Rochester",
+            "Yakima",
+            "Lacey",
+            "Everett",
+            "Moses Lake",
+            "Moxee",
+            "Monroe",
+            "Edmonds",
+            "Bothell",
+            "Kirkland",
+            "Bellevue",
+            "Vancouver",
+            "Olympia",
+            "Lynnwood",
+            "Issaquah",
+            "Bainbridge Island",
+            "Redmond",
+            "Renton",
+            "Port Townsend",
+            "Seabeck",
+            "Tukwila",
+            "Kent",
+            "Burien",
+            "Maple Valley",
+            "Shoreline",
+            "Newcastle",
+            "Covington",
+            "Woodland",
+            "Silverdale",
+            "Camas",
+            "Duvall",
+            "Seatac",
+            "Kingston",
+            "Des Moines",
+            "Marysville",
+            "Nine Mile Falls",
+            "Sammamish",
+            "Tumwater",
+            "Woodinville",
+            "Lake Forest Park",
+            "Bremerton",
+            "Normandy Park",
+            "Snohomish",
+            "Yelm",
+            "Kalama",
+            "Auburn",
+            "Skykomish",
+            "Poulsbo",
+            "Lake Stevens",
+            "Battle Ground",
+            "Medina",
+            "Federal Way",
+            "Washougal",
+            "Port Orchard",
+            "Brush Prairie",
+            "Olalla",
+            "Ridgefield",
+            "Port Ludlow",
+            "Port Angeles",
+            "Quilcene",
+            "Longview",
+            "Kenmore",
+            "Enumclaw",
+            "Oak Harbor",
+            "Tenino",
+            "Mill Creek",
+            "Kelso",
+            "Brinnon",
+            "Clyde Hill",
+            "Mercer Island",
+            "La Center",
+            "Black Diamond",
+            "Grandview",
+            "Arlington",
+            "North Bend",
+            "Silverlake",
+            "Carnation",
+            "Mabton",
+            "White Salmon",
+            "Outlook",
+            "Brier",
+            "Suquamish",
+            "Snoqualmie",
+            "Stanwood",
+            "Mukilteo",
+            "Ariel",
+            "Granite Falls",
+            "Pacific",
+            "Hansville",
+            "Sequim",
+            "Zillah"
+          ],
+          "makes": [
+            "TESLA"
+          ],
+          "models": [
+            "MODEL Y",
+            "MODEL 3",
+            "MODEL X",
+            "MODEL S"
+          ],
+          "topMakes": [
+            [
+              "TESLA",
+              2058
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 2058,
+              "percentage": 100
+            },
+            "PHEV": {
+              "count": 0,
+              "percentage": 0
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2020",
+              2058
+            ]
+          ],
+          "topCounties": [
+            [
+              "King",
+              1597
+            ],
+            [
+              "Clark",
+              163
+            ],
+            [
+              "Snohomish",
+              121
+            ],
+            [
+              "Kitsap",
+              78
+            ],
+            [
+              "Thurston",
+              46
+            ],
+            [
+              "Cowlitz",
+              24
+            ],
+            [
+              "Yakima",
+              10
+            ],
+            [
+              "Jefferson",
+              10
+            ],
+            [
+              "Island",
+              3
+            ],
+            [
+              "Clallam",
+              2
+            ]
+          ],
+          "topCities": [
+            [
+              "Seattle",
+              483
+            ],
+            [
+              "Bellevue",
+              221
+            ],
+            [
+              "Kirkland",
+              126
+            ],
+            [
+              "Sammamish",
+              123
+            ],
+            [
+              "Redmond",
+              116
+            ],
+            [
+              "Vancouver",
+              104
+            ],
+            [
+              "Bothell",
+              80
+            ],
+            [
+              "Issaquah",
+              57
+            ],
+            [
+              "Renton",
+              57
+            ],
+            [
+              "Kent",
+              54
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "291",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "291",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "322",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "322",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "266",
+            "county": "Thurston",
+            "city": "Rochester"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "Older PHEV vehicles from King County",
+        "criteria": "Model Year < 2018 AND Electric Vehicle Type = PHEV AND County = King",
+        "filterTypes": [
+          "Model Year",
+          "EV Type",
+          "County"
+        ],
+        "analysis": {
+          "totalVehicles": 1751,
+          "totalBEV": 0,
+          "totalPHEV": 1751,
+          "avgRange": 32.49,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "King"
+          ],
+          "cities": [
+            "Renton",
+            "Seattle",
+            "Vashon",
+            "Shoreline",
+            "Bellevue",
+            "Auburn",
+            "Tukwila",
+            "Redmond",
+            "Newcastle",
+            "Seatac",
+            "Sammamish",
+            "Burien",
+            "Federal Way",
+            "Kirkland",
+            "Kent",
+            "Woodinville",
+            "Kenmore",
+            "Bothell",
+            "Duvall",
+            "Issaquah",
+            "Clyde Hill",
+            "North Bend",
+            "Lake Forest Park",
+            "Normandy Park",
+            "Mercer Island",
+            "Medina",
+            "Des Moines",
+            "Covington",
+            "Algona",
+            "Maple Valley",
+            "Beaux Arts",
+            "Enumclaw",
+            "Milton",
+            "Pacific",
+            "Snoqualmie",
+            "Black Diamond",
+            "Carnation"
+          ],
+          "makes": [
+            "BMW",
+            "TOYOTA",
+            "FORD",
+            "VOLVO",
+            "CHEVROLET",
+            "KIA",
+            "HONDA",
+            "PORSCHE",
+            "FISKER",
+            "AUDI",
+            "MERCEDES-BENZ",
+            "CADILLAC",
+            "CHRYSLER",
+            "HYUNDAI"
+          ],
+          "models": [
+            "I3",
+            "I8",
+            "X5",
+            "PRIUS PLUG-IN",
+            "C-MAX",
+            "PRIUS PRIME",
+            "XC90",
+            "330E",
+            "VOLT",
+            "FUSION",
+            "OPTIMA",
+            "ACCORD",
+            "CAYENNE",
+            "KARMA",
+            "A3",
+            "GLE-CLASS",
+            "ELR",
+            "PACIFICA",
+            "PANAMERA",
+            "SONATA",
+            "C-CLASS",
+            "740E",
+            "S-CLASS"
+          ],
+          "topMakes": [
+            [
+              "CHEVROLET",
+              490
+            ],
+            [
+              "FORD",
+              382
+            ],
+            [
+              "BMW",
+              319
+            ],
+            [
+              "TOYOTA",
+              311
+            ],
+            [
+              "AUDI",
+              103
+            ],
+            [
+              "VOLVO",
+              54
+            ],
+            [
+              "PORSCHE",
+              36
+            ],
+            [
+              "CHRYSLER",
+              14
+            ],
+            [
+              "HYUNDAI",
+              11
+            ],
+            [
+              "CADILLAC",
+              9
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 0,
+              "percentage": 0
+            },
+            "PHEV": {
+              "count": 1751,
+              "percentage": 100
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2017",
+              649
+            ],
+            [
+              "2016",
+              283
+            ],
+            [
+              "2015",
+              198
+            ],
+            [
+              "2014",
+              279
+            ],
+            [
+              "2013",
+              227
+            ],
+            [
+              "2012",
+              104
+            ],
+            [
+              "2011",
+              11
+            ]
+          ],
+          "topCounties": [
+            [
+              "King",
+              1751
+            ]
+          ],
+          "topCities": [
+            [
+              "Seattle",
+              617
+            ],
+            [
+              "Bellevue",
+              163
+            ],
+            [
+              "Kirkland",
+              116
+            ],
+            [
+              "Renton",
+              86
+            ],
+            [
+              "Shoreline",
+              84
+            ],
+            [
+              "Kent",
+              73
+            ],
+            [
+              "Sammamish",
+              66
+            ],
+            [
+              "Redmond",
+              59
+            ],
+            [
+              "Federal Way",
+              52
+            ],
+            [
+              "Auburn",
+              44
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "BMW",
+            "model": "I3",
+            "year": "2014",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "72",
+            "county": "King",
+            "city": "Renton"
+          },
+          {
+            "make": "BMW",
+            "model": "I8",
+            "year": "2017",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "14",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "BMW",
+            "model": "X5",
+            "year": "2017",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "14",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "BMW",
+            "model": "I3",
+            "year": "2015",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "72",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "BMW",
+            "model": "I3",
+            "year": "2016",
+            "type": "Plug-in Hybrid Electric Vehicle (PHEV)",
+            "range": "72",
+            "county": "King",
+            "city": "Vashon"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "Mid-range BEV vehicles from 2019-2021 eligible for CAFV incentives",
+        "criteria": "Model Year >= 2019 AND Model Year <= 2021 AND Electric Vehicle Type = BEV AND CAFV Eligibility = Eligible",
+        "filterTypes": [
+          "Model Year",
+          "EV Type",
+          "CAFV Eligibility"
+        ],
+        "analysis": {
+          "totalVehicles": 5524,
+          "totalBEV": 5524,
+          "totalPHEV": 0,
+          "avgRange": 243.69,
+          "states": [
+            "WA"
+          ],
+          "counties": [
+            "King",
+            "Yakima",
+            "Thurston",
+            "Snohomish",
+            "Kitsap",
+            "Island",
+            "Grant",
+            "Chelan",
+            "Skagit",
+            "Clark",
+            "Jefferson",
+            "Cowlitz",
+            "Stevens",
+            "Clallam",
+            "Klickitat"
+          ],
+          "cities": [
+            "Seattle",
+            "Yakima",
+            "Olympia",
+            "Rochester",
+            "Tenino",
+            "Lacey",
+            "Renton",
+            "Everett",
+            "Kingston",
+            "Bremerton",
+            "Snohomish",
+            "Oak Harbor",
+            "Mill Creek",
+            "Moses Lake",
+            "Moxee",
+            "Mukilteo",
+            "Edmonds",
+            "Monroe",
+            "Clinton",
+            "Bothell",
+            "Cashmere",
+            "Langley",
+            "Mount Vernon",
+            "Kirkland",
+            "Bellevue",
+            "Vancouver",
+            "Redmond",
+            "Poulsbo",
+            "Medina",
+            "Auburn",
+            "Lynnwood",
+            "Issaquah",
+            "Bainbridge Island",
+            "Sammamish",
+            "Kent",
+            "Federal Way",
+            "Port Townsend",
+            "Shoreline",
+            "Seabeck",
+            "Des Moines",
+            "Tukwila",
+            "Burien",
+            "Kenmore",
+            "Rainier",
+            "Maple Valley",
+            "Newcastle",
+            "Yelm",
+            "Tumwater",
+            "Yacolt",
+            "Covington",
+            "Camas",
+            "Woodinville",
+            "Lake Stevens",
+            "Woodland",
+            "Silverdale",
+            "Normandy Park",
+            "Duvall",
+            "Nine Mile Falls",
+            "Seatac",
+            "Port Orchard",
+            "Longview",
+            "Marysville",
+            "North Bend",
+            "Lake Forest Park",
+            "Ridgefield",
+            "Enumclaw",
+            "Port Ludlow",
+            "Kalama",
+            "Skykomish",
+            "Algona",
+            "Battle Ground",
+            "Washougal",
+            "Quilcene",
+            "Granite Falls",
+            "Selah",
+            "Brush Prairie",
+            "Olalla",
+            "Port Angeles",
+            "Naches",
+            "Forks",
+            "Nordland",
+            "La Center",
+            "Castle Rock",
+            "Beaux Arts",
+            "Suquamish",
+            "Clyde Hill",
+            "Ariel",
+            "Camano Island",
+            "Kelso",
+            "Mercer Island",
+            "Brinnon",
+            "Indianola",
+            "Coupeville",
+            "Black Diamond",
+            "Carnation",
+            "Grandview",
+            "Snoqualmie",
+            "White Salmon",
+            "Arlington",
+            "Silverlake",
+            "Brier",
+            "Yarrow Point",
+            "Hunts Point",
+            "Mabton",
+            "Outlook",
+            "Chimacum",
+            "Amboy",
+            "Mountlake Terrace",
+            "Hansville",
+            "Stanwood",
+            "Goldendale",
+            "Colville",
+            "Pacific",
+            "Zillah",
+            "Sequim",
+            "Sultan"
+          ],
+          "makes": [
+            "TESLA",
+            "AUDI",
+            "NISSAN",
+            "KIA",
+            "HYUNDAI",
+            "VOLKSWAGEN",
+            "CHEVROLET",
+            "JAGUAR",
+            "PORSCHE",
+            "MINI",
+            "POLESTAR",
+            "BMW",
+            "SMART",
+            "FIAT"
+          ],
+          "models": [
+            "MODEL Y",
+            "MODEL S",
+            "MODEL 3",
+            "E-TRON",
+            "LEAF",
+            "NIRO",
+            "KONA",
+            "IONIQ",
+            "E-GOLF",
+            "MODEL X",
+            "BOLT EV",
+            "I-PACE",
+            "TAYCAN",
+            "E-TRON SPORTBACK",
+            "HARDTOP",
+            "PS2",
+            "I3",
+            "EQ FORTWO",
+            "500"
+          ],
+          "topMakes": [
+            [
+              "TESLA",
+              3416
+            ],
+            [
+              "CHEVROLET",
+              598
+            ],
+            [
+              "NISSAN",
+              574
+            ],
+            [
+              "KIA",
+              246
+            ],
+            [
+              "AUDI",
+              216
+            ],
+            [
+              "VOLKSWAGEN",
+              175
+            ],
+            [
+              "HYUNDAI",
+              78
+            ],
+            [
+              "PORSCHE",
+              67
+            ],
+            [
+              "JAGUAR",
+              49
+            ],
+            [
+              "POLESTAR",
+              36
+            ]
+          ],
+          "evTypeDistribution": {
+            "BEV": {
+              "count": 5524,
+              "percentage": 100
+            },
+            "PHEV": {
+              "count": 0,
+              "percentage": 0
+            }
+          },
+          "vehiclesByYear": [
+            [
+              "2021",
+              155
+            ],
+            [
+              "2020",
+              2825
+            ],
+            [
+              "2019",
+              2544
+            ]
+          ],
+          "topCounties": [
+            [
+              "King",
+              4123
+            ],
+            [
+              "Clark",
+              520
+            ],
+            [
+              "Snohomish",
+              282
+            ],
+            [
+              "Kitsap",
+              254
+            ],
+            [
+              "Thurston",
+              186
+            ],
+            [
+              "Cowlitz",
+              50
+            ],
+            [
+              "Jefferson",
+              47
+            ],
+            [
+              "Yakima",
+              28
+            ],
+            [
+              "Island",
+              15
+            ],
+            [
+              "Clallam",
+              7
+            ]
+          ],
+          "topCities": [
+            [
+              "Seattle",
+              1354
+            ],
+            [
+              "Bellevue",
+              515
+            ],
+            [
+              "Kirkland",
+              337
+            ],
+            [
+              "Vancouver",
+              325
+            ],
+            [
+              "Sammamish",
+              292
+            ],
+            [
+              "Redmond",
+              252
+            ],
+            [
+              "Bothell",
+              192
+            ],
+            [
+              "Shoreline",
+              153
+            ],
+            [
+              "Renton",
+              134
+            ],
+            [
+              "Issaquah",
+              134
+            ]
+          ]
+        },
+        "sampleRecords": [
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "291",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL S",
+            "year": "2019",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "270",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL Y",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "291",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "year": "2020",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "322",
+            "county": "King",
+            "city": "Seattle"
+          },
+          {
+            "make": "TESLA",
+            "model": "MODEL 3",
+            "year": "2019",
+            "type": "Battery Electric Vehicle (BEV)",
+            "range": "220",
+            "county": "Yakima",
+            "city": "Yakima"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "generatedAt": "2026-02-01T06:13:58.082Z",
+    "totalRecords": 50000,
+    "independentTestCases": 15,
+    "groupTestCases": 3
+  }
+}

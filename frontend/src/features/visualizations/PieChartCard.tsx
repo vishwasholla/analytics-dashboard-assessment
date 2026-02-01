@@ -11,22 +11,24 @@ interface PieChartCardProps {
 export const PieChartCard = memo(({ title, data }: PieChartCardProps) => {
   // Custom label that only shows percentage inside, name in legend
   const renderLabel = ({ percent }: any) => {
-    return `${(percent * 100).toFixed(0)}%`;
+    // Only show percentage if it's significant enough (>= 5%)
+    return percent >= 0.05 ? `${(percent * 100).toFixed(0)}%` : '';
   };
 
   return (
     <div className="bg-white rounded-lg shadow p-2 sm:p-3">
       <h3 className="text-sm font-semibold text-gray-900 mb-1.5">{title}</h3>
-      <div className="h-40 sm:h-44">
+      <div className="h-48 sm:h-52">
         <ResponsiveContainer width="100%" height="100%">
-          <PieChart>
+          <PieChart margin={{ top: 5, right: 5, bottom: 5, left: 5 }}>
             <Pie
               data={data}
               cx="50%"
-              cy="45%"
+              cy="40%"
               labelLine={false}
               label={renderLabel}
-              outerRadius={50}
+              outerRadius={40}
+              innerRadius={0}
               fill="#8884d8"
               dataKey="value"
             >
@@ -34,13 +36,31 @@ export const PieChartCard = memo(({ title, data }: PieChartCardProps) => {
                 <Cell key={`cell-${index}`} fill={CHART_COLORS[index % CHART_COLORS.length]} />
               ))}
             </Pie>
-            <Tooltip contentStyle={{ fontSize: '11px' }} />
+            <Tooltip 
+              contentStyle={{ 
+                fontSize: '11px',
+                backgroundColor: '#fff',
+                border: '1px solid #e5e7eb',
+                borderRadius: '0.5rem',
+              }} 
+              formatter={(value: number, name: string) => [
+                `${value} vehicles (${((value / data.reduce((sum, item) => sum + item.value, 0)) * 100).toFixed(1)}%)`,
+                name
+              ]}
+            />
             <Legend 
-              wrapperStyle={{ fontSize: '11px' }} 
-              iconSize={8}
+              wrapperStyle={{ 
+                fontSize: '10px',
+                paddingTop: '8px'
+              }} 
+              iconSize={6}
               layout="horizontal"
               verticalAlign="bottom"
               align="center"
+              formatter={(value: string) => {
+                // Truncate long model names for better display
+                return value.length > 15 ? `${value.substring(0, 15)}...` : value;
+              }}
             />
           </PieChart>
         </ResponsiveContainer>

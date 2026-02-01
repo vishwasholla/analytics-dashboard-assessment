@@ -182,8 +182,10 @@ export const calculateStats = (data: EVData[]): AggregatedStats => {
   const bevCount = data.filter((v) => v.evType === 'BEV').length;
   const phevCount = data.filter((v) => v.evType === 'PHEV').length;
   
-  const totalRange = data.reduce((sum, v) => sum + v.electricRange, 0);
-  const avgRange = Math.round(totalRange / data.length);
+  // Calculate average range only for vehicles with known range (> 0)
+  const vehiclesWithRange = data.filter(v => v.electricRange > 0);
+  const totalRange = vehiclesWithRange.reduce((sum, v) => sum + v.electricRange, 0);
+  const avgRange = vehiclesWithRange.length > 0 ? Math.round(totalRange / vehiclesWithRange.length) : 0;
   
   const vehiclesWithMSRP = data.filter(v => v.baseMSRP > 0);
   const totalMSRP = vehiclesWithMSRP.reduce((sum, v) => sum + v.baseMSRP, 0);
